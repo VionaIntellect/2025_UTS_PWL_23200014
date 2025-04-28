@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react';
 export default function PreorderPage() {
 
   const [formVisible, setFormVisible] = useState(false);
-  const [ order_date, SetOrderDate ] = useState('');
-  const [ order_by, SetOrderBy ] = useState('');
+  const [ order_date, setOrderDate ] = useState('');
+  const [ order_by, setOrderBy ] = useState('');
   const [ selected_package, setSelectedPackage ]= useState('');
   const [ qty, setQty ] = useState('');
   const [ status, setStatus ] = useState('');
