@@ -897,6 +897,7 @@ export namespace Prisma {
     order_by: string | null
     selected_package: string | null
     qty: number | null
+    status: string | null
     is_paid: boolean | null
   }
 
@@ -906,6 +907,7 @@ export namespace Prisma {
     order_by: string | null
     selected_package: string | null
     qty: number | null
+    status: string | null
     is_paid: boolean | null
   }
 
@@ -915,6 +917,7 @@ export namespace Prisma {
     order_by: number
     selected_package: number
     qty: number
+    status: number
     is_paid: number
     _all: number
   }
@@ -936,6 +939,7 @@ export namespace Prisma {
     order_by?: true
     selected_package?: true
     qty?: true
+    status?: true
     is_paid?: true
   }
 
@@ -945,6 +949,7 @@ export namespace Prisma {
     order_by?: true
     selected_package?: true
     qty?: true
+    status?: true
     is_paid?: true
   }
 
@@ -954,6 +959,7 @@ export namespace Prisma {
     order_by?: true
     selected_package?: true
     qty?: true
+    status?: true
     is_paid?: true
     _all?: true
   }
@@ -1050,6 +1056,7 @@ export namespace Prisma {
     order_by: string
     selected_package: string
     qty: number
+    status: string
     is_paid: boolean
     _count: PreorderCountAggregateOutputType | null
     _avg: PreorderAvgAggregateOutputType | null
@@ -1078,6 +1085,7 @@ export namespace Prisma {
     order_by?: boolean
     selected_package?: boolean
     qty?: boolean
+    status?: boolean
     is_paid?: boolean
   }, ExtArgs["result"]["preorder"]>
 
@@ -1087,6 +1095,7 @@ export namespace Prisma {
     order_by?: boolean
     selected_package?: boolean
     qty?: boolean
+    status?: boolean
     is_paid?: boolean
   }, ExtArgs["result"]["preorder"]>
 
@@ -1096,6 +1105,7 @@ export namespace Prisma {
     order_by?: boolean
     selected_package?: boolean
     qty?: boolean
+    status?: boolean
     is_paid?: boolean
   }, ExtArgs["result"]["preorder"]>
 
@@ -1105,10 +1115,11 @@ export namespace Prisma {
     order_by?: boolean
     selected_package?: boolean
     qty?: boolean
+    status?: boolean
     is_paid?: boolean
   }
 
-  export type preorderOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "order_date" | "order_by" | "selected_package" | "qty" | "is_paid", ExtArgs["result"]["preorder"]>
+  export type preorderOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "order_date" | "order_by" | "selected_package" | "qty" | "status" | "is_paid", ExtArgs["result"]["preorder"]>
 
   export type $preorderPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "preorder"
@@ -1119,6 +1130,7 @@ export namespace Prisma {
       order_by: string
       selected_package: string
       qty: number
+      status: string
       is_paid: boolean
     }, ExtArgs["result"]["preorder"]>
     composites: {}
@@ -1548,6 +1560,7 @@ export namespace Prisma {
     readonly order_by: FieldRef<"preorder", 'String'>
     readonly selected_package: FieldRef<"preorder", 'String'>
     readonly qty: FieldRef<"preorder", 'Int'>
+    readonly status: FieldRef<"preorder", 'String'>
     readonly is_paid: FieldRef<"preorder", 'Boolean'>
   }
     
@@ -1930,6 +1943,7 @@ export namespace Prisma {
     order_by: 'order_by',
     selected_package: 'selected_package',
     qty: 'qty',
+    status: 'status',
     is_paid: 'is_paid'
   };
 
@@ -1996,6 +2010,7 @@ export namespace Prisma {
     order_by?: StringFilter<"preorder"> | string
     selected_package?: StringFilter<"preorder"> | string
     qty?: IntFilter<"preorder"> | number
+    status?: StringFilter<"preorder"> | string
     is_paid?: BoolFilter<"preorder"> | boolean
   }
 
@@ -2005,6 +2020,7 @@ export namespace Prisma {
     order_by?: SortOrder
     selected_package?: SortOrder
     qty?: SortOrder
+    status?: SortOrder
     is_paid?: SortOrder
   }
 
@@ -2017,6 +2033,7 @@ export namespace Prisma {
     order_by?: StringFilter<"preorder"> | string
     selected_package?: StringFilter<"preorder"> | string
     qty?: IntFilter<"preorder"> | number
+    status?: StringFilter<"preorder"> | string
     is_paid?: BoolFilter<"preorder"> | boolean
   }, "id">
 
@@ -2026,6 +2043,7 @@ export namespace Prisma {
     order_by?: SortOrder
     selected_package?: SortOrder
     qty?: SortOrder
+    status?: SortOrder
     is_paid?: SortOrder
     _count?: preorderCountOrderByAggregateInput
     _avg?: preorderAvgOrderByAggregateInput
@@ -2043,6 +2061,7 @@ export namespace Prisma {
     order_by?: StringWithAggregatesFilter<"preorder"> | string
     selected_package?: StringWithAggregatesFilter<"preorder"> | string
     qty?: IntWithAggregatesFilter<"preorder"> | number
+    status?: StringWithAggregatesFilter<"preorder"> | string
     is_paid?: BoolWithAggregatesFilter<"preorder"> | boolean
   }
 
@@ -2051,6 +2070,7 @@ export namespace Prisma {
     order_by: string
     selected_package: string
     qty: number
+    status: string
     is_paid: boolean
   }
 
@@ -2060,6 +2080,7 @@ export namespace Prisma {
     order_by: string
     selected_package: string
     qty: number
+    status: string
     is_paid: boolean
   }
 
@@ -2068,6 +2089,7 @@ export namespace Prisma {
     order_by?: StringFieldUpdateOperationsInput | string
     selected_package?: StringFieldUpdateOperationsInput | string
     qty?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
     is_paid?: BoolFieldUpdateOperationsInput | boolean
   }
 
@@ -2077,6 +2099,7 @@ export namespace Prisma {
     order_by?: StringFieldUpdateOperationsInput | string
     selected_package?: StringFieldUpdateOperationsInput | string
     qty?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
     is_paid?: BoolFieldUpdateOperationsInput | boolean
   }
 
@@ -2086,6 +2109,7 @@ export namespace Prisma {
     order_by: string
     selected_package: string
     qty: number
+    status: string
     is_paid: boolean
   }
 
@@ -2094,6 +2118,7 @@ export namespace Prisma {
     order_by?: StringFieldUpdateOperationsInput | string
     selected_package?: StringFieldUpdateOperationsInput | string
     qty?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
     is_paid?: BoolFieldUpdateOperationsInput | boolean
   }
 
@@ -2103,6 +2128,7 @@ export namespace Prisma {
     order_by?: StringFieldUpdateOperationsInput | string
     selected_package?: StringFieldUpdateOperationsInput | string
     qty?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
     is_paid?: BoolFieldUpdateOperationsInput | boolean
   }
 
@@ -2153,6 +2179,7 @@ export namespace Prisma {
     order_by?: SortOrder
     selected_package?: SortOrder
     qty?: SortOrder
+    status?: SortOrder
     is_paid?: SortOrder
   }
 
@@ -2167,6 +2194,7 @@ export namespace Prisma {
     order_by?: SortOrder
     selected_package?: SortOrder
     qty?: SortOrder
+    status?: SortOrder
     is_paid?: SortOrder
   }
 
@@ -2176,6 +2204,7 @@ export namespace Prisma {
     order_by?: SortOrder
     selected_package?: SortOrder
     qty?: SortOrder
+    status?: SortOrder
     is_paid?: SortOrder
   }
 

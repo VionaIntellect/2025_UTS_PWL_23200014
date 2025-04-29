@@ -17,5 +17,6 @@ model preorder {
   order_by         String
   selected_package String
   qty              Int
+  status           String
   is_paid          Boolean
 }
