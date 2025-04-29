@@ -28,6 +28,7 @@
 .formWrapper h1 {
     font-size: 1.5rem;
     margin-bottom: 20px;
+    color: #333;
 }
 
 .formGroup {
@@ -39,6 +40,7 @@
 .formGroup span {
     margin-bottom: 5px;
     font-weight: 500;
+    color: #333;
 }
 
 .radioGroup {
@@ -62,8 +64,14 @@
 
 .tableWrapper {
     margin-top: 30px;
+    overflow-x: auto;
+    text-align: center;
 }
 
 .title {
     margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
 }
