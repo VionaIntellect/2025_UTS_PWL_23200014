@@ -1,6 +1,6 @@
 "use client";
 import styles from './PreorderPage.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function PreorderPage() {
   const [formVisible, setFormVisible] = useState(false);
@@ -11,8 +11,17 @@ export default function PreorderPage() {
   const [status, setStatus] = useState('');
   const [msg, setMsg] = useState('');
   const [dataList, setDataList] = useState([]);
-  const [editIndex, setEditIndex] = useState(null); // NEW: untuk tahu apakah sedang edit
+  const [editIndex, setEditIndex] = useState(null); 
 
+  
+  useEffect(() => {
+    const savedData = localStorage.getItem('dataList');
+    if (savedData) {
+      setDataList(JSON.parse(savedData));
+    }
+  }, []);
+
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -29,20 +38,23 @@ export default function PreorderPage() {
       status,
     };
 
+    let updatedList;
     if (editIndex !== null) {
-      // mode edit
-      const updatedList = [...dataList];
+   
+      updatedList = [...dataList];
       updatedList[editIndex] = newData;
-      setDataList(updatedList);
       setEditIndex(null);
       setMsg('Data berhasil diperbarui!');
     } else {
-      // mode tambah
-      setDataList([...dataList, newData]);
+  
+      updatedList = [...dataList, newData];
       setMsg('Data berhasil disimpan!');
     }
 
-    // Reset form
+    localStorage.setItem('dataList', JSON.stringify(updatedList));
+
+    setDataList(updatedList);
+
     setOrderDate('');
     setOrderBy('');
     setSelectedPackage('');
@@ -54,6 +66,8 @@ export default function PreorderPage() {
     const updatedList = [...dataList];
     updatedList.splice(index, 1);
     setDataList(updatedList);
+
+    localStorage.setItem('dataList', JSON.stringify(updatedList));
   };
 
   const handleEdit = (index) => {
@@ -74,7 +88,7 @@ export default function PreorderPage() {
         className={styles.buttonToggle}
         onClick={() => {
           setFormVisible(!formVisible);
-          setEditIndex(null); // reset edit mode saat tutup form
+          setEditIndex(null); 
         }}
       >
         {formVisible ? 'Tutup Form' : 'Tambah Data'}
