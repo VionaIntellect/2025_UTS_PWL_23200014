@@ -1,13 +1,27 @@
 import prisma from '@/lib/prisma';
 
+function formatPreorder(data) {
+  const format = ({ is_paid, order_date, id, ...rest }) => ({
+    id,
+    order_date: new Date(order_date).toISOString().split('T')[0], 
+    ...rest,
+  });
+
+  return Array.isArray(data) ? data.map(format) : format(data);
+}
+
 export async function GET() {
   try {
     const data = await prisma.preorder.findMany({
       orderBy: { id: 'asc' },
     });
-    return new Response(JSON.stringify(data), { status: 200 });
+
+    return new Response(JSON.stringify(formatPreorder(data)), { status: 200 });
   } catch (error) {
-    return new Response(JSON.stringify({ error: 'Gagal mengambil data' }), { status: 500 });
+    return new Response(
+      JSON.stringify({ error: 'Gagal mengambil data', detail: error.message }),
+      { status: 500 }
+    );
   }
 }
 
@@ -19,7 +33,7 @@ export async function POST(request) {
       return new Response(JSON.stringify({ error: 'Semua field wajib diisi' }), { status: 400 });
     }
 
-    const data = await prisma.preorder.create({
+    const created = await prisma.preorder.create({
       data: {
         order_date: new Date(order_date),
         order_by,
@@ -30,10 +44,11 @@ export async function POST(request) {
       },
     });
 
-    return new Response(JSON.stringify(data), { status: 201 });
+    return new Response(JSON.stringify(formatPreorder(created)), { status: 201 });
   } catch (error) {
-    return new Response(JSON.stringify({ error: 'Gagal menambahkan data', detail: error.message }), {
-      status: 500,
-    });
+    return new Response(
+      JSON.stringify({ error: 'Gagal menambahkan data', detail: error.message }),
+      { status: 500 }
+    );
   }
 }
