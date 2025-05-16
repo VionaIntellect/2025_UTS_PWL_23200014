@@ -120,8 +120,14 @@ exports.Prisma.PreorderScalarFieldEnum = {
   order_by: 'order_by',
   selected_package: 'selected_package',
   qty: 'qty',
-  status: 'status',
   is_paid: 'is_paid'
+};
+
+exports.Prisma.PackageScalarFieldEnum = {
+  id: 'id',
+  kode: 'kode',
+  nama: 'nama',
+  deskripsi: 'deskripsi'
 };
 
 exports.Prisma.SortOrder = {
@@ -131,7 +137,8 @@ exports.Prisma.SortOrder = {
 
 
 exports.Prisma.ModelName = {
-  preorder: 'preorder'
+  preorder: 'preorder',
+  Package: 'Package'
 };
 
 /**

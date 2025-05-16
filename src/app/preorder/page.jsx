@@ -60,6 +60,8 @@ export default function PreorderPage() {
     setSelectedPackage('');
     setQty('');
     setStatus('');
+    setFormVisible(!formVisible);
+    setEditIndex(null); 
   };
 
   const handleDelete = (index) => {
