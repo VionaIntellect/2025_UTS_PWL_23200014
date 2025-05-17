@@ -18,39 +18,38 @@ export default function PackagePage() {
     }
   }, []);
 
-    const handleSubmit = (e) => {
+  const resetForm = () => {
+    setKode('');
+    setNama('');
+    setDeskripsi('');
+    setEditIndex(null);
+    setFormVisible(false);
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!kode || !nama || !deskripsi) {
-        setMsg('Semua kolom wajib diisi!');
-        return;
+      setMsg('Semua kolom wajib diisi!');
+      return;
     }
 
-    const newData = {
-        kode,
-        nama,
-        deskripsi,
-    };
-
+    const newData = { kode, nama, deskripsi };
     let updatedList;
+
     if (editIndex !== null) {
-        updatedList = [...dataList];
-        updatedList[editIndex] = newData;
-        setMsg('Data berhasil diperbarui!');
-        setEditIndex(null);
-        setFormVisible(false);
+      updatedList = [...dataList];
+      updatedList[editIndex] = newData;
+      setMsg('Data berhasil diperbarui!');
     } else {
-        updatedList = [...dataList, newData];
-        setMsg('Data berhasil disimpan!');
+      updatedList = [...dataList, newData];
+      setMsg('Data berhasil disimpan!');
     }
 
     localStorage.setItem('packageData', JSON.stringify(updatedList));
     setDataList(updatedList);
-
-    setKode('');
-    setNama('');
-    setDeskripsi('');
-    };
+    resetForm(); 
+  };
 
   const handleEdit = (index) => {
     const data = dataList[index];
@@ -62,6 +61,9 @@ export default function PackagePage() {
   };
 
   const handleDelete = (index) => {
+    const confirmed = window.confirm('Apakah Anda yakin ingin menghapus data ini?');
+    if (!confirmed) return;
+
     const updatedList = [...dataList];
     updatedList.splice(index, 1);
     localStorage.setItem('packageData', JSON.stringify(updatedList));
@@ -71,14 +73,14 @@ export default function PackagePage() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Paket Ayam Penyet Koh Alex</h1>
+
       <button
         className={styles.buttonToggle}
         onClick={() => {
           setFormVisible(!formVisible);
-          setEditIndex(null);
-          setKode('');
-          setNama('');
-          setDeskripsi('');
+          if (formVisible) {
+            resetForm();
+          }
         }}
       >
         {formVisible ? 'Tutup Form' : 'Tambah Data'}

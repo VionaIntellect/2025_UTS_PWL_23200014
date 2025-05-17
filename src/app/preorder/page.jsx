@@ -2,57 +2,52 @@
 import styles from './PreorderPage.module.css';
 import { useState, useEffect } from 'react';
 
-export default function PreorderPage() {
+export default function PreorderPageDynamic() {
   const [formVisible, setFormVisible] = useState(false);
   const [order_date, setOrderDate] = useState('');
   const [order_by, setOrderBy] = useState('');
   const [selected_package, setSelectedPackage] = useState('');
   const [qty, setQty] = useState('');
   const [status, setStatus] = useState('');
-  const [msg, setMsg] = useState('');
   const [dataList, setDataList] = useState([]);
-  const [editIndex, setEditIndex] = useState(null); 
+  const [editIndex, setEditIndex] = useState(null);
 
-  
+  const [packageOptions, setPackageOptions] = useState([]);
+
   useEffect(() => {
-    const savedData = localStorage.getItem('dataList');
-    if (savedData) {
-      setDataList(JSON.parse(savedData));
+    const saved = localStorage.getItem('dataList');
+    if (saved) {
+      setDataList(JSON.parse(saved));
     }
   }, []);
 
-  
+  useEffect(() => {
+    const packages = localStorage.getItem('packageData');
+    if (packages) {
+      try {
+        const parsed = JSON.parse(packages);
+        setPackageOptions(parsed);
+      } catch {
+        setPackageOptions([]);
+      }
+    }
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!order_date || !order_by || !selected_package || !qty || !status) return;
 
-    if (!order_date || !order_by || !selected_package || !qty || !status) {
-      setMsg('Semua kolom wajib diisi!');
-      return;
-    }
+    const newData = { order_date, order_by, selected_package, qty, status };
+    let updatedList = [...dataList];
 
-    const newData = {
-      order_date,
-      order_by,
-      selected_package,
-      qty,
-      status,
-    };
-
-    let updatedList;
     if (editIndex !== null) {
-   
-      updatedList = [...dataList];
       updatedList[editIndex] = newData;
       setEditIndex(null);
-      setMsg('Data berhasil diperbarui!');
     } else {
-  
-      updatedList = [...dataList, newData];
-      setMsg('Data berhasil disimpan!');
+      updatedList.push(newData);
     }
 
     localStorage.setItem('dataList', JSON.stringify(updatedList));
-
     setDataList(updatedList);
 
     setOrderDate('');
@@ -60,16 +55,16 @@ export default function PreorderPage() {
     setSelectedPackage('');
     setQty('');
     setStatus('');
-    setFormVisible(!formVisible);
-    setEditIndex(null); 
+    setFormVisible(false);
   };
 
   const handleDelete = (index) => {
-    const updatedList = [...dataList];
-    updatedList.splice(index, 1);
-    setDataList(updatedList);
-
-    localStorage.setItem('dataList', JSON.stringify(updatedList));
+    if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+      const updated = [...dataList];
+      updated.splice(index, 1);
+      setDataList(updated);
+      localStorage.setItem('dataList', JSON.stringify(updated));
+    }
   };
 
   const handleEdit = (index) => {
@@ -90,7 +85,7 @@ export default function PreorderPage() {
         className={styles.buttonToggle}
         onClick={() => {
           setFormVisible(!formVisible);
-          setEditIndex(null); 
+          setEditIndex(null);
         }}
       >
         {formVisible ? 'Tutup Form' : 'Tambah Data'}
@@ -101,7 +96,7 @@ export default function PreorderPage() {
           <h3>{editIndex !== null ? 'Edit Data' : 'Input Data Baru'}</h3>
           <form onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
-              <span>Tanggal Pesanan</span>
+              <label>Tanggal Pesanan</label>
               <input
                 type="date"
                 value={order_date}
@@ -110,47 +105,50 @@ export default function PreorderPage() {
               />
             </div>
             <div className={styles.formGroup}>
-              <span>Nama Pemesan</span>
+              <label>Nama Pemesan</label>
               <input
                 type="text"
                 value={order_by}
                 onChange={(e) => setOrderBy(e.target.value)}
-                placeholder="Masukkan Nama Pemesan"
                 required
               />
             </div>
             <div className={styles.formGroup}>
-              <span>Paket</span>
+              <label>Paket</label>
               <select
                 value={selected_package}
                 onChange={(e) => setSelectedPackage(e.target.value)}
                 required
               >
                 <option value="">Pilih Paket</option>
-                <option value="Paket 1">Paket 1</option>
-                <option value="Paket 2">Paket 2</option>
-                <option value="Paket 3">Paket 3</option>
-                <option value="Paket 4">Paket 4</option>
-                <option value="Paket 5">Paket 5</option>
+                {packageOptions.length === 0 && (
+                  <>
+                    <option disabled>-- Tidak ada paket tersedia --</option>
+                  </>
+                )}
+                {packageOptions.map((pkg, i) => (
+                  <option key={i} value={pkg.nama}>
+                    {pkg.nama}
+                  </option>
+                ))}
               </select>
             </div>
             <div className={styles.formGroup}>
-              <span>Jumlah</span>
+              <label>Jumlah</label>
               <input
                 type="text"
                 value={qty}
                 onChange={(e) => setQty(e.target.value)}
-                placeholder="Input Jumlah"
                 required
               />
             </div>
             <div className={styles.formGroup}>
-              <span>Status</span>
+              <label>Status</label>
               <label>
                 <input
                   type="radio"
                   value="Lunas"
-                  checked={status === "Lunas"}
+                  checked={status === 'Lunas'}
                   onChange={(e) => setStatus(e.target.value)}
                 />
                 Lunas
@@ -159,16 +157,13 @@ export default function PreorderPage() {
                 <input
                   type="radio"
                   value="Belum Lunas"
-                  checked={status === "Belum Lunas"}
+                  checked={status === 'Belum Lunas'}
                   onChange={(e) => setStatus(e.target.value)}
                 />
                 Belum Lunas
               </label>
             </div>
-            <button type="submit">
-              {editIndex !== null ? 'Perbarui' : 'Simpan'}
-            </button>
-            <p>{msg}</p>
+            <button type="submit">{editIndex !== null ? 'Perbarui' : 'Simpan'}</button>
           </form>
         </div>
       )}
@@ -178,8 +173,8 @@ export default function PreorderPage() {
           <thead>
             <tr>
               <th>No</th>
-              <th>Tanggal Pesanan</th>
-              <th>Nama Pemesan</th>
+              <th>Tanggal</th>
+              <th>Pemesan</th>
               <th>Paket</th>
               <th>Jumlah</th>
               <th>Status</th>
@@ -197,7 +192,7 @@ export default function PreorderPage() {
                 <td>{item.status}</td>
                 <td>
                   <button onClick={() => handleEdit(index)}>Edit</button>{' '}
-                  <button onClick={() => handleDelete(index)}>Delete</button>
+                  <button onClick={() => handleDelete(index)}>Hapus</button>
                 </td>
               </tr>
             ))}
