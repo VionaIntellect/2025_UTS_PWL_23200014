@@ -130,15 +130,29 @@ exports.Prisma.PackageScalarFieldEnum = {
   deskripsi: 'deskripsi'
 };
 
+exports.Prisma.CustomerScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  phone: 'phone',
+  email: 'email',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
   preorder: 'preorder',
-  Package: 'Package'
+  Package: 'Package',
+  customer: 'customer'
 };
 
 /**
