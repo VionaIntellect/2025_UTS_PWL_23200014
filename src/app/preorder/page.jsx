@@ -1,8 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import styles from "./PreorderPage.module.css";
 
 export default function PreorderPage() {
+  const router = useRouter();
+
   const [formVisible, setFormVisible] = useState(false);
   const [editIndex, setEditIndex] = useState(null);
 
@@ -79,7 +82,6 @@ export default function PreorderPage() {
     setFormVisible(false);
   };
 
-  // Handle edit
   const handleEdit = (index) => {
     const data = dataList[index];
     setOrderDate(data.order_date);
@@ -100,9 +102,34 @@ export default function PreorderPage() {
     }
   };
 
+  const goToPackagePage = () => {
+    router.push("/package");
+  };
+
+  const goToCustomerPage = () => {
+    router.push("/customer");
+  };
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Ayam Penyet Koh Alex</h1>
+
+      <div style={{ marginBottom: "20px" }}>
+        <button
+          className={styles.buttonToggle}
+          onClick={goToPackagePage}
+          style={{ marginRight: "15px" }}
+        >
+          Go to Package
+        </button>
+
+        <button
+          className={styles.buttonToggle}
+          onClick={goToCustomerPage}
+        >
+          Go to Customer
+        </button>
+      </div>
 
       <button
         className={styles.buttonToggle}

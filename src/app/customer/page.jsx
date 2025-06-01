@@ -1,8 +1,11 @@
 "use client";
 import styles from './CustomerPage.module.css';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';  
 
 export default function CustomerPage() {
+  const router = useRouter(); 
+
   const [formVisible, setFormVisible] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -74,7 +77,6 @@ export default function CustomerPage() {
       setMsg('Data pelanggan berhasil diperbarui!');
     } else {
       updatedList = [...dataList, newData];
-      setMsg('Data pelanggan berhasil disimpan!');
     }
 
     localStorage.setItem('customerData', JSON.stringify(updatedList));
@@ -103,7 +105,16 @@ export default function CustomerPage() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Data Pelanggan Ayam Penyet Koh Alex</h1>
+      <h1 className={styles.title}>Pelanggan Ayam Penyet Koh Alex</h1>
+
+      <div style={{ marginBottom: "20px" }}>
+        <button 
+          className={styles.buttonToggle} 
+          onClick={() => router.push("/preorder")}
+        >
+          Go to Preorder
+        </button>
+      </div>
 
       <button
         className={styles.buttonToggle}
@@ -156,7 +167,7 @@ export default function CustomerPage() {
               <th>Nama</th>
               <th>Telepon</th>
               <th>Email</th>
-              <th>Waktu Dibuat</th>
+              <th>Waktu</th>
               <th>Aksi</th>
             </tr>
           </thead>

@@ -1,6 +1,7 @@
 "use client";
 import styles from './PackagePage.module.css';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function PackagePage() {
   const [formVisible, setFormVisible] = useState(false);
@@ -10,6 +11,8 @@ export default function PackagePage() {
   const [dataList, setDataList] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
   const [msg, setMsg] = useState('');
+
+  const router = useRouter();
 
   useEffect(() => {
     const savedData = localStorage.getItem('packageData');
@@ -43,12 +46,11 @@ export default function PackagePage() {
       setMsg('Data berhasil diperbarui!');
     } else {
       updatedList = [...dataList, newData];
-      setMsg('Data berhasil disimpan!');
     }
 
     localStorage.setItem('packageData', JSON.stringify(updatedList));
     setDataList(updatedList);
-    resetForm(); 
+    resetForm();
   };
 
   const handleEdit = (index) => {
@@ -70,21 +72,34 @@ export default function PackagePage() {
     setDataList(updatedList);
   };
 
+  const goToPreorderPage = () => {
+    router.push('/preorder');
+  };
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Paket Ayam Penyet Koh Alex</h1>
 
-      <button
-        className={styles.buttonToggle}
-        onClick={() => {
-          setFormVisible(!formVisible);
-          if (formVisible) {
-            resetForm();
-          }
-        }}
-      >
-        {formVisible ? 'Tutup Form' : 'Tambah Data'}
-      </button>
+      <div style={{ marginBottom: '15px' }}>
+        <button
+          className={styles.buttonToggle}
+          onClick={goToPreorderPage}
+          style={{ display: 'block', marginBottom: '35px', width: 'auto' }}
+        >
+          Go to Preorder
+        </button>
+
+        <button
+          className={styles.buttonToggle}
+          onClick={() => {
+            setFormVisible(!formVisible);
+            if (formVisible) resetForm();
+          }}
+          style={{ display: 'block', width: 'auto' }}
+        >
+          {formVisible ? 'Tutup Form' : 'Tambah Paket'}
+        </button>
+      </div>
 
       {formVisible && (
         <form className={styles.formWrapper} onSubmit={handleSubmit}>
