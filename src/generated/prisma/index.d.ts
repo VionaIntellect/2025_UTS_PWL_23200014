@@ -14,20 +14,20 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model preorder
+ * Model Preorder
  * 
  */
-export type preorder = $Result.DefaultSelection<Prisma.$preorderPayload>
+export type Preorder = $Result.DefaultSelection<Prisma.$PreorderPayload>
 /**
  * Model Package
  * 
  */
 export type Package = $Result.DefaultSelection<Prisma.$PackagePayload>
 /**
- * Model customer
+ * Model Customer
  * 
  */
-export type customer = $Result.DefaultSelection<Prisma.$customerPayload>
+export type Customer = $Result.DefaultSelection<Prisma.$CustomerPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -155,14 +155,14 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.preorder`: Exposes CRUD operations for the **preorder** model.
+   * `prisma.preorder`: Exposes CRUD operations for the **Preorder** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Preorders
     * const preorders = await prisma.preorder.findMany()
     * ```
     */
-  get preorder(): Prisma.preorderDelegate<ExtArgs, ClientOptions>;
+  get preorder(): Prisma.PreorderDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.package`: Exposes CRUD operations for the **Package** model.
@@ -175,14 +175,14 @@ export class PrismaClient<
   get package(): Prisma.PackageDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.customer`: Exposes CRUD operations for the **customer** model.
+   * `prisma.customer`: Exposes CRUD operations for the **Customer** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Customers
     * const customers = await prisma.customer.findMany()
     * ```
     */
-  get customer(): Prisma.customerDelegate<ExtArgs, ClientOptions>;
+  get customer(): Prisma.CustomerDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -623,9 +623,9 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    preorder: 'preorder',
+    Preorder: 'Preorder',
     Package: 'Package',
-    customer: 'customer'
+    Customer: 'Customer'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -648,76 +648,76 @@ export namespace Prisma {
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      preorder: {
-        payload: Prisma.$preorderPayload<ExtArgs>
-        fields: Prisma.preorderFieldRefs
+      Preorder: {
+        payload: Prisma.$PreorderPayload<ExtArgs>
+        fields: Prisma.PreorderFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.preorderFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload> | null
+            args: Prisma.PreorderFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PreorderPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.preorderFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.PreorderFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PreorderPayload>
           }
           findFirst: {
-            args: Prisma.preorderFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload> | null
+            args: Prisma.PreorderFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PreorderPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.preorderFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.PreorderFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PreorderPayload>
           }
           findMany: {
-            args: Prisma.preorderFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>[]
+            args: Prisma.PreorderFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PreorderPayload>[]
           }
           create: {
-            args: Prisma.preorderCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.PreorderCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PreorderPayload>
           }
           createMany: {
-            args: Prisma.preorderCreateManyArgs<ExtArgs>
+            args: Prisma.PreorderCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.preorderCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>[]
+            args: Prisma.PreorderCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PreorderPayload>[]
           }
           delete: {
-            args: Prisma.preorderDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.PreorderDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PreorderPayload>
           }
           update: {
-            args: Prisma.preorderUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.PreorderUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PreorderPayload>
           }
           deleteMany: {
-            args: Prisma.preorderDeleteManyArgs<ExtArgs>
+            args: Prisma.PreorderDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.preorderUpdateManyArgs<ExtArgs>
+            args: Prisma.PreorderUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.preorderUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>[]
+            args: Prisma.PreorderUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PreorderPayload>[]
           }
           upsert: {
-            args: Prisma.preorderUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$preorderPayload>
+            args: Prisma.PreorderUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PreorderPayload>
           }
           aggregate: {
             args: Prisma.PreorderAggregateArgs<ExtArgs>
             result: $Utils.Optional<AggregatePreorder>
           }
           groupBy: {
-            args: Prisma.preorderGroupByArgs<ExtArgs>
+            args: Prisma.PreorderGroupByArgs<ExtArgs>
             result: $Utils.Optional<PreorderGroupByOutputType>[]
           }
           count: {
-            args: Prisma.preorderCountArgs<ExtArgs>
+            args: Prisma.PreorderCountArgs<ExtArgs>
             result: $Utils.Optional<PreorderCountAggregateOutputType> | number
           }
         }
@@ -796,76 +796,76 @@ export namespace Prisma {
           }
         }
       }
-      customer: {
-        payload: Prisma.$customerPayload<ExtArgs>
-        fields: Prisma.customerFieldRefs
+      Customer: {
+        payload: Prisma.$CustomerPayload<ExtArgs>
+        fields: Prisma.CustomerFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.customerFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload> | null
+            args: Prisma.CustomerFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CustomerPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.customerFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
+            args: Prisma.CustomerFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CustomerPayload>
           }
           findFirst: {
-            args: Prisma.customerFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload> | null
+            args: Prisma.CustomerFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CustomerPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.customerFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
+            args: Prisma.CustomerFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CustomerPayload>
           }
           findMany: {
-            args: Prisma.customerFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>[]
+            args: Prisma.CustomerFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CustomerPayload>[]
           }
           create: {
-            args: Prisma.customerCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
+            args: Prisma.CustomerCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CustomerPayload>
           }
           createMany: {
-            args: Prisma.customerCreateManyArgs<ExtArgs>
+            args: Prisma.CustomerCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.customerCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>[]
+            args: Prisma.CustomerCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CustomerPayload>[]
           }
           delete: {
-            args: Prisma.customerDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
+            args: Prisma.CustomerDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CustomerPayload>
           }
           update: {
-            args: Prisma.customerUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
+            args: Prisma.CustomerUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CustomerPayload>
           }
           deleteMany: {
-            args: Prisma.customerDeleteManyArgs<ExtArgs>
+            args: Prisma.CustomerDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.customerUpdateManyArgs<ExtArgs>
+            args: Prisma.CustomerUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.customerUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>[]
+            args: Prisma.CustomerUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CustomerPayload>[]
           }
           upsert: {
-            args: Prisma.customerUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$customerPayload>
+            args: Prisma.CustomerUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CustomerPayload>
           }
           aggregate: {
             args: Prisma.CustomerAggregateArgs<ExtArgs>
             result: $Utils.Optional<AggregateCustomer>
           }
           groupBy: {
-            args: Prisma.customerGroupByArgs<ExtArgs>
+            args: Prisma.CustomerGroupByArgs<ExtArgs>
             result: $Utils.Optional<CustomerGroupByOutputType>[]
           }
           count: {
-            args: Prisma.customerCountArgs<ExtArgs>
+            args: Prisma.CustomerCountArgs<ExtArgs>
             result: $Utils.Optional<CustomerCountAggregateOutputType> | number
           }
         }
@@ -954,9 +954,9 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    preorder?: preorderOmit
+    preorder?: PreorderOmit
     package?: PackageOmit
-    customer?: customerOmit
+    customer?: CustomerOmit
   }
 
   /* Types for Logging */
@@ -1046,13 +1046,74 @@ export namespace Prisma {
    */
 
 
+  /**
+   * Count Type PackageCountOutputType
+   */
+
+  export type PackageCountOutputType = {
+    preorders: number
+  }
+
+  export type PackageCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    preorders?: boolean | PackageCountOutputTypeCountPreordersArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * PackageCountOutputType without action
+   */
+  export type PackageCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PackageCountOutputType
+     */
+    select?: PackageCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * PackageCountOutputType without action
+   */
+  export type PackageCountOutputTypeCountPreordersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PreorderWhereInput
+  }
+
+
+  /**
+   * Count Type CustomerCountOutputType
+   */
+
+  export type CustomerCountOutputType = {
+    preorders: number
+  }
+
+  export type CustomerCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    preorders?: boolean | CustomerCountOutputTypeCountPreordersArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * CustomerCountOutputType without action
+   */
+  export type CustomerCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CustomerCountOutputType
+     */
+    select?: CustomerCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * CustomerCountOutputType without action
+   */
+  export type CustomerCountOutputTypeCountPreordersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PreorderWhereInput
+  }
+
 
   /**
    * Models
    */
 
   /**
-   * Model preorder
+   * Model Preorder
    */
 
   export type AggregatePreorder = {
@@ -1065,19 +1126,23 @@ export namespace Prisma {
 
   export type PreorderAvgAggregateOutputType = {
     id: number | null
+    order_by: number | null
+    selected_package: number | null
     qty: number | null
   }
 
   export type PreorderSumAggregateOutputType = {
     id: number | null
+    order_by: number | null
+    selected_package: number | null
     qty: number | null
   }
 
   export type PreorderMinAggregateOutputType = {
     id: number | null
     order_date: Date | null
-    order_by: string | null
-    selected_package: string | null
+    order_by: number | null
+    selected_package: number | null
     qty: number | null
     is_paid: boolean | null
   }
@@ -1085,8 +1150,8 @@ export namespace Prisma {
   export type PreorderMaxAggregateOutputType = {
     id: number | null
     order_date: Date | null
-    order_by: string | null
-    selected_package: string | null
+    order_by: number | null
+    selected_package: number | null
     qty: number | null
     is_paid: boolean | null
   }
@@ -1104,11 +1169,15 @@ export namespace Prisma {
 
   export type PreorderAvgAggregateInputType = {
     id?: true
+    order_by?: true
+    selected_package?: true
     qty?: true
   }
 
   export type PreorderSumAggregateInputType = {
     id?: true
+    order_by?: true
+    selected_package?: true
     qty?: true
   }
 
@@ -1142,37 +1211,37 @@ export namespace Prisma {
 
   export type PreorderAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which preorder to aggregate.
+     * Filter which Preorder to aggregate.
      */
-    where?: preorderWhereInput
+    where?: PreorderWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of preorders to fetch.
+     * Determine the order of Preorders to fetch.
      */
-    orderBy?: preorderOrderByWithRelationInput | preorderOrderByWithRelationInput[]
+    orderBy?: PreorderOrderByWithRelationInput | PreorderOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: preorderWhereUniqueInput
+    cursor?: PreorderWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` preorders from the position of the cursor.
+     * Take `±n` Preorders from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` preorders.
+     * Skip the first `n` Preorders.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned preorders
+     * Count returned Preorders
     **/
     _count?: true | PreorderCountAggregateInputType
     /**
@@ -1212,11 +1281,11 @@ export namespace Prisma {
 
 
 
-  export type preorderGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: preorderWhereInput
-    orderBy?: preorderOrderByWithAggregationInput | preorderOrderByWithAggregationInput[]
+  export type PreorderGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PreorderWhereInput
+    orderBy?: PreorderOrderByWithAggregationInput | PreorderOrderByWithAggregationInput[]
     by: PreorderScalarFieldEnum[] | PreorderScalarFieldEnum
-    having?: preorderScalarWhereWithAggregatesInput
+    having?: PreorderScalarWhereWithAggregatesInput
     take?: number
     skip?: number
     _count?: PreorderCountAggregateInputType | true
@@ -1229,8 +1298,8 @@ export namespace Prisma {
   export type PreorderGroupByOutputType = {
     id: number
     order_date: Date
-    order_by: string
-    selected_package: string
+    order_by: number
+    selected_package: number
     qty: number
     is_paid: boolean
     _count: PreorderCountAggregateOutputType | null
@@ -1240,7 +1309,7 @@ export namespace Prisma {
     _max: PreorderMaxAggregateOutputType | null
   }
 
-  type GetPreorderGroupByPayload<T extends preorderGroupByArgs> = Prisma.PrismaPromise<
+  type GetPreorderGroupByPayload<T extends PreorderGroupByArgs> = Prisma.PrismaPromise<
     Array<
       PickEnumerable<PreorderGroupByOutputType, T['by']> &
         {
@@ -1254,34 +1323,40 @@ export namespace Prisma {
     >
 
 
-  export type preorderSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PreorderSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     order_date?: boolean
     order_by?: boolean
     selected_package?: boolean
     qty?: boolean
     is_paid?: boolean
+    package?: boolean | PackageDefaultArgs<ExtArgs>
+    customer?: boolean | CustomerDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["preorder"]>
 
-  export type preorderSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PreorderSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     order_date?: boolean
     order_by?: boolean
     selected_package?: boolean
     qty?: boolean
     is_paid?: boolean
+    package?: boolean | PackageDefaultArgs<ExtArgs>
+    customer?: boolean | CustomerDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["preorder"]>
 
-  export type preorderSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type PreorderSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     order_date?: boolean
     order_by?: boolean
     selected_package?: boolean
     qty?: boolean
     is_paid?: boolean
+    package?: boolean | PackageDefaultArgs<ExtArgs>
+    customer?: boolean | CustomerDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["preorder"]>
 
-  export type preorderSelectScalar = {
+  export type PreorderSelectScalar = {
     id?: boolean
     order_date?: boolean
     order_by?: boolean
@@ -1290,34 +1365,49 @@ export namespace Prisma {
     is_paid?: boolean
   }
 
-  export type preorderOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "order_date" | "order_by" | "selected_package" | "qty" | "is_paid", ExtArgs["result"]["preorder"]>
+  export type PreorderOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "order_date" | "order_by" | "selected_package" | "qty" | "is_paid", ExtArgs["result"]["preorder"]>
+  export type PreorderInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    package?: boolean | PackageDefaultArgs<ExtArgs>
+    customer?: boolean | CustomerDefaultArgs<ExtArgs>
+  }
+  export type PreorderIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    package?: boolean | PackageDefaultArgs<ExtArgs>
+    customer?: boolean | CustomerDefaultArgs<ExtArgs>
+  }
+  export type PreorderIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    package?: boolean | PackageDefaultArgs<ExtArgs>
+    customer?: boolean | CustomerDefaultArgs<ExtArgs>
+  }
 
-  export type $preorderPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "preorder"
-    objects: {}
+  export type $PreorderPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Preorder"
+    objects: {
+      package: Prisma.$PackagePayload<ExtArgs>
+      customer: Prisma.$CustomerPayload<ExtArgs>
+    }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       order_date: Date
-      order_by: string
-      selected_package: string
+      order_by: number
+      selected_package: number
       qty: number
       is_paid: boolean
     }, ExtArgs["result"]["preorder"]>
     composites: {}
   }
 
-  type preorderGetPayload<S extends boolean | null | undefined | preorderDefaultArgs> = $Result.GetResult<Prisma.$preorderPayload, S>
+  type PreorderGetPayload<S extends boolean | null | undefined | PreorderDefaultArgs> = $Result.GetResult<Prisma.$PreorderPayload, S>
 
-  type preorderCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<preorderFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+  type PreorderCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<PreorderFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
       select?: PreorderCountAggregateInputType | true
     }
 
-  export interface preorderDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['preorder'], meta: { name: 'preorder' } }
+  export interface PreorderDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Preorder'], meta: { name: 'Preorder' } }
     /**
      * Find zero or one Preorder that matches the filter.
-     * @param {preorderFindUniqueArgs} args - Arguments to find a Preorder
+     * @param {PreorderFindUniqueArgs} args - Arguments to find a Preorder
      * @example
      * // Get one Preorder
      * const preorder = await prisma.preorder.findUnique({
@@ -1326,12 +1416,12 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUnique<T extends preorderFindUniqueArgs>(args: SelectSubset<T, preorderFindUniqueArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends PreorderFindUniqueArgs>(args: SelectSubset<T, PreorderFindUniqueArgs<ExtArgs>>): Prisma__PreorderClient<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find one Preorder that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {preorderFindUniqueOrThrowArgs} args - Arguments to find a Preorder
+     * @param {PreorderFindUniqueOrThrowArgs} args - Arguments to find a Preorder
      * @example
      * // Get one Preorder
      * const preorder = await prisma.preorder.findUniqueOrThrow({
@@ -1340,13 +1430,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUniqueOrThrow<T extends preorderFindUniqueOrThrowArgs>(args: SelectSubset<T, preorderFindUniqueOrThrowArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends PreorderFindUniqueOrThrowArgs>(args: SelectSubset<T, PreorderFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PreorderClient<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Preorder that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderFindFirstArgs} args - Arguments to find a Preorder
+     * @param {PreorderFindFirstArgs} args - Arguments to find a Preorder
      * @example
      * // Get one Preorder
      * const preorder = await prisma.preorder.findFirst({
@@ -1355,14 +1445,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirst<T extends preorderFindFirstArgs>(args?: SelectSubset<T, preorderFindFirstArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends PreorderFindFirstArgs>(args?: SelectSubset<T, PreorderFindFirstArgs<ExtArgs>>): Prisma__PreorderClient<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Preorder that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderFindFirstOrThrowArgs} args - Arguments to find a Preorder
+     * @param {PreorderFindFirstOrThrowArgs} args - Arguments to find a Preorder
      * @example
      * // Get one Preorder
      * const preorder = await prisma.preorder.findFirstOrThrow({
@@ -1371,13 +1461,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirstOrThrow<T extends preorderFindFirstOrThrowArgs>(args?: SelectSubset<T, preorderFindFirstOrThrowArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends PreorderFindFirstOrThrowArgs>(args?: SelectSubset<T, PreorderFindFirstOrThrowArgs<ExtArgs>>): Prisma__PreorderClient<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Preorders that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {PreorderFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Preorders
      * const preorders = await prisma.preorder.findMany()
@@ -1389,11 +1479,11 @@ export namespace Prisma {
      * const preorderWithIdOnly = await prisma.preorder.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends preorderFindManyArgs>(args?: SelectSubset<T, preorderFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends PreorderFindManyArgs>(args?: SelectSubset<T, PreorderFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
      * Create a Preorder.
-     * @param {preorderCreateArgs} args - Arguments to create a Preorder.
+     * @param {PreorderCreateArgs} args - Arguments to create a Preorder.
      * @example
      * // Create one Preorder
      * const Preorder = await prisma.preorder.create({
@@ -1403,11 +1493,11 @@ export namespace Prisma {
      * })
      * 
      */
-    create<T extends preorderCreateArgs>(args: SelectSubset<T, preorderCreateArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends PreorderCreateArgs>(args: SelectSubset<T, PreorderCreateArgs<ExtArgs>>): Prisma__PreorderClient<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Preorders.
-     * @param {preorderCreateManyArgs} args - Arguments to create many Preorders.
+     * @param {PreorderCreateManyArgs} args - Arguments to create many Preorders.
      * @example
      * // Create many Preorders
      * const preorder = await prisma.preorder.createMany({
@@ -1417,11 +1507,11 @@ export namespace Prisma {
      * })
      *     
      */
-    createMany<T extends preorderCreateManyArgs>(args?: SelectSubset<T, preorderCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends PreorderCreateManyArgs>(args?: SelectSubset<T, PreorderCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Preorders and returns the data saved in the database.
-     * @param {preorderCreateManyAndReturnArgs} args - Arguments to create many Preorders.
+     * @param {PreorderCreateManyAndReturnArgs} args - Arguments to create many Preorders.
      * @example
      * // Create many Preorders
      * const preorder = await prisma.preorder.createManyAndReturn({
@@ -1441,11 +1531,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends preorderCreateManyAndReturnArgs>(args?: SelectSubset<T, preorderCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends PreorderCreateManyAndReturnArgs>(args?: SelectSubset<T, PreorderCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Delete a Preorder.
-     * @param {preorderDeleteArgs} args - Arguments to delete one Preorder.
+     * @param {PreorderDeleteArgs} args - Arguments to delete one Preorder.
      * @example
      * // Delete one Preorder
      * const Preorder = await prisma.preorder.delete({
@@ -1455,11 +1545,11 @@ export namespace Prisma {
      * })
      * 
      */
-    delete<T extends preorderDeleteArgs>(args: SelectSubset<T, preorderDeleteArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends PreorderDeleteArgs>(args: SelectSubset<T, PreorderDeleteArgs<ExtArgs>>): Prisma__PreorderClient<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Update one Preorder.
-     * @param {preorderUpdateArgs} args - Arguments to update one Preorder.
+     * @param {PreorderUpdateArgs} args - Arguments to update one Preorder.
      * @example
      * // Update one Preorder
      * const preorder = await prisma.preorder.update({
@@ -1472,11 +1562,11 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends preorderUpdateArgs>(args: SelectSubset<T, preorderUpdateArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends PreorderUpdateArgs>(args: SelectSubset<T, PreorderUpdateArgs<ExtArgs>>): Prisma__PreorderClient<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Preorders.
-     * @param {preorderDeleteManyArgs} args - Arguments to filter Preorders to delete.
+     * @param {PreorderDeleteManyArgs} args - Arguments to filter Preorders to delete.
      * @example
      * // Delete a few Preorders
      * const { count } = await prisma.preorder.deleteMany({
@@ -1486,13 +1576,13 @@ export namespace Prisma {
      * })
      * 
      */
-    deleteMany<T extends preorderDeleteManyArgs>(args?: SelectSubset<T, preorderDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends PreorderDeleteManyArgs>(args?: SelectSubset<T, PreorderDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Preorders.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {PreorderUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Preorders
      * const preorder = await prisma.preorder.updateMany({
@@ -1505,11 +1595,11 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends preorderUpdateManyArgs>(args: SelectSubset<T, preorderUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends PreorderUpdateManyArgs>(args: SelectSubset<T, PreorderUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Preorders and returns the data updated in the database.
-     * @param {preorderUpdateManyAndReturnArgs} args - Arguments to update many Preorders.
+     * @param {PreorderUpdateManyAndReturnArgs} args - Arguments to update many Preorders.
      * @example
      * // Update many Preorders
      * const preorder = await prisma.preorder.updateManyAndReturn({
@@ -1535,11 +1625,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends preorderUpdateManyAndReturnArgs>(args: SelectSubset<T, preorderUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends PreorderUpdateManyAndReturnArgs>(args: SelectSubset<T, PreorderUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Preorder.
-     * @param {preorderUpsertArgs} args - Arguments to update or create a Preorder.
+     * @param {PreorderUpsertArgs} args - Arguments to update or create a Preorder.
      * @example
      * // Update or create a Preorder
      * const preorder = await prisma.preorder.upsert({
@@ -1554,14 +1644,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    upsert<T extends preorderUpsertArgs>(args: SelectSubset<T, preorderUpsertArgs<ExtArgs>>): Prisma__preorderClient<$Result.GetResult<Prisma.$preorderPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends PreorderUpsertArgs>(args: SelectSubset<T, PreorderUpsertArgs<ExtArgs>>): Prisma__PreorderClient<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Preorders.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderCountArgs} args - Arguments to filter Preorders to count.
+     * @param {PreorderCountArgs} args - Arguments to filter Preorders to count.
      * @example
      * // Count the number of Preorders
      * const count = await prisma.preorder.count({
@@ -1570,8 +1660,8 @@ export namespace Prisma {
      *   }
      * })
     **/
-    count<T extends preorderCountArgs>(
-      args?: Subset<T, preorderCountArgs>,
+    count<T extends PreorderCountArgs>(
+      args?: Subset<T, PreorderCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
@@ -1610,7 +1700,7 @@ export namespace Prisma {
      * Group by Preorder.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {preorderGroupByArgs} args - Group by arguments.
+     * @param {PreorderGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1625,14 +1715,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends preorderGroupByArgs,
+      T extends PreorderGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: preorderGroupByArgs['orderBy'] }
-        : { orderBy?: preorderGroupByArgs['orderBy'] },
+        ? { orderBy: PreorderGroupByArgs['orderBy'] }
+        : { orderBy?: PreorderGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1681,21 +1771,23 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, preorderGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPreorderGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, PreorderGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPreorderGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the preorder model
+   * Fields of the Preorder model
    */
-  readonly fields: preorderFieldRefs;
+  readonly fields: PreorderFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for preorder.
+   * The delegate class that acts as a "Promise-like" for Preorder.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__preorderClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__PreorderClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    package<T extends PackageDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PackageDefaultArgs<ExtArgs>>): Prisma__PackageClient<$Result.GetResult<Prisma.$PackagePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    customer<T extends CustomerDefaultArgs<ExtArgs> = {}>(args?: Subset<T, CustomerDefaultArgs<ExtArgs>>): Prisma__CustomerClient<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1722,376 +1814,424 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the preorder model
+   * Fields of the Preorder model
    */
-  interface preorderFieldRefs {
-    readonly id: FieldRef<"preorder", 'Int'>
-    readonly order_date: FieldRef<"preorder", 'DateTime'>
-    readonly order_by: FieldRef<"preorder", 'String'>
-    readonly selected_package: FieldRef<"preorder", 'String'>
-    readonly qty: FieldRef<"preorder", 'Int'>
-    readonly is_paid: FieldRef<"preorder", 'Boolean'>
+  interface PreorderFieldRefs {
+    readonly id: FieldRef<"Preorder", 'Int'>
+    readonly order_date: FieldRef<"Preorder", 'DateTime'>
+    readonly order_by: FieldRef<"Preorder", 'Int'>
+    readonly selected_package: FieldRef<"Preorder", 'Int'>
+    readonly qty: FieldRef<"Preorder", 'Int'>
+    readonly is_paid: FieldRef<"Preorder", 'Boolean'>
   }
     
 
   // Custom InputTypes
   /**
-   * preorder findUnique
+   * Preorder findUnique
    */
-  export type preorderFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the preorder
+     * Select specific fields to fetch from the Preorder
      */
-    select?: preorderSelect<ExtArgs> | null
+    select?: PreorderSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the preorder
+     * Omit specific fields from the Preorder
      */
-    omit?: preorderOmit<ExtArgs> | null
+    omit?: PreorderOmit<ExtArgs> | null
     /**
-     * Filter, which preorder to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where: preorderWhereUniqueInput
+    include?: PreorderInclude<ExtArgs> | null
+    /**
+     * Filter, which Preorder to fetch.
+     */
+    where: PreorderWhereUniqueInput
   }
 
   /**
-   * preorder findUniqueOrThrow
+   * Preorder findUniqueOrThrow
    */
-  export type preorderFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the preorder
+     * Select specific fields to fetch from the Preorder
      */
-    select?: preorderSelect<ExtArgs> | null
+    select?: PreorderSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the preorder
+     * Omit specific fields from the Preorder
      */
-    omit?: preorderOmit<ExtArgs> | null
+    omit?: PreorderOmit<ExtArgs> | null
     /**
-     * Filter, which preorder to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where: preorderWhereUniqueInput
+    include?: PreorderInclude<ExtArgs> | null
+    /**
+     * Filter, which Preorder to fetch.
+     */
+    where: PreorderWhereUniqueInput
   }
 
   /**
-   * preorder findFirst
+   * Preorder findFirst
    */
-  export type preorderFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the preorder
+     * Select specific fields to fetch from the Preorder
      */
-    select?: preorderSelect<ExtArgs> | null
+    select?: PreorderSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the preorder
+     * Omit specific fields from the Preorder
      */
-    omit?: preorderOmit<ExtArgs> | null
+    omit?: PreorderOmit<ExtArgs> | null
     /**
-     * Filter, which preorder to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: preorderWhereInput
+    include?: PreorderInclude<ExtArgs> | null
+    /**
+     * Filter, which Preorder to fetch.
+     */
+    where?: PreorderWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of preorders to fetch.
+     * Determine the order of Preorders to fetch.
      */
-    orderBy?: preorderOrderByWithRelationInput | preorderOrderByWithRelationInput[]
+    orderBy?: PreorderOrderByWithRelationInput | PreorderOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for preorders.
+     * Sets the position for searching for Preorders.
      */
-    cursor?: preorderWhereUniqueInput
+    cursor?: PreorderWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` preorders from the position of the cursor.
+     * Take `±n` Preorders from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` preorders.
+     * Skip the first `n` Preorders.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of preorders.
+     * Filter by unique combinations of Preorders.
      */
     distinct?: PreorderScalarFieldEnum | PreorderScalarFieldEnum[]
   }
 
   /**
-   * preorder findFirstOrThrow
+   * Preorder findFirstOrThrow
    */
-  export type preorderFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the preorder
+     * Select specific fields to fetch from the Preorder
      */
-    select?: preorderSelect<ExtArgs> | null
+    select?: PreorderSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the preorder
+     * Omit specific fields from the Preorder
      */
-    omit?: preorderOmit<ExtArgs> | null
+    omit?: PreorderOmit<ExtArgs> | null
     /**
-     * Filter, which preorder to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: preorderWhereInput
+    include?: PreorderInclude<ExtArgs> | null
+    /**
+     * Filter, which Preorder to fetch.
+     */
+    where?: PreorderWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of preorders to fetch.
+     * Determine the order of Preorders to fetch.
      */
-    orderBy?: preorderOrderByWithRelationInput | preorderOrderByWithRelationInput[]
+    orderBy?: PreorderOrderByWithRelationInput | PreorderOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for preorders.
+     * Sets the position for searching for Preorders.
      */
-    cursor?: preorderWhereUniqueInput
+    cursor?: PreorderWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` preorders from the position of the cursor.
+     * Take `±n` Preorders from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` preorders.
+     * Skip the first `n` Preorders.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of preorders.
+     * Filter by unique combinations of Preorders.
      */
     distinct?: PreorderScalarFieldEnum | PreorderScalarFieldEnum[]
   }
 
   /**
-   * preorder findMany
+   * Preorder findMany
    */
-  export type preorderFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the preorder
+     * Select specific fields to fetch from the Preorder
      */
-    select?: preorderSelect<ExtArgs> | null
+    select?: PreorderSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the preorder
+     * Omit specific fields from the Preorder
      */
-    omit?: preorderOmit<ExtArgs> | null
+    omit?: PreorderOmit<ExtArgs> | null
     /**
-     * Filter, which preorders to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: preorderWhereInput
+    include?: PreorderInclude<ExtArgs> | null
+    /**
+     * Filter, which Preorders to fetch.
+     */
+    where?: PreorderWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of preorders to fetch.
+     * Determine the order of Preorders to fetch.
      */
-    orderBy?: preorderOrderByWithRelationInput | preorderOrderByWithRelationInput[]
+    orderBy?: PreorderOrderByWithRelationInput | PreorderOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing preorders.
+     * Sets the position for listing Preorders.
      */
-    cursor?: preorderWhereUniqueInput
+    cursor?: PreorderWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` preorders from the position of the cursor.
+     * Take `±n` Preorders from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` preorders.
+     * Skip the first `n` Preorders.
      */
     skip?: number
     distinct?: PreorderScalarFieldEnum | PreorderScalarFieldEnum[]
   }
 
   /**
-   * preorder create
+   * Preorder create
    */
-  export type preorderCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the preorder
+     * Select specific fields to fetch from the Preorder
      */
-    select?: preorderSelect<ExtArgs> | null
+    select?: PreorderSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the preorder
+     * Omit specific fields from the Preorder
      */
-    omit?: preorderOmit<ExtArgs> | null
+    omit?: PreorderOmit<ExtArgs> | null
     /**
-     * The data needed to create a preorder.
+     * Choose, which related nodes to fetch as well
      */
-    data: XOR<preorderCreateInput, preorderUncheckedCreateInput>
+    include?: PreorderInclude<ExtArgs> | null
+    /**
+     * The data needed to create a Preorder.
+     */
+    data: XOR<PreorderCreateInput, PreorderUncheckedCreateInput>
   }
 
   /**
-   * preorder createMany
+   * Preorder createMany
    */
-  export type preorderCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many preorders.
+     * The data used to create many Preorders.
      */
-    data: preorderCreateManyInput | preorderCreateManyInput[]
+    data: PreorderCreateManyInput | PreorderCreateManyInput[]
   }
 
   /**
-   * preorder createManyAndReturn
+   * Preorder createManyAndReturn
    */
-  export type preorderCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the preorder
+     * Select specific fields to fetch from the Preorder
      */
-    select?: preorderSelectCreateManyAndReturn<ExtArgs> | null
+    select?: PreorderSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the preorder
+     * Omit specific fields from the Preorder
      */
-    omit?: preorderOmit<ExtArgs> | null
+    omit?: PreorderOmit<ExtArgs> | null
     /**
-     * The data used to create many preorders.
+     * The data used to create many Preorders.
      */
-    data: preorderCreateManyInput | preorderCreateManyInput[]
+    data: PreorderCreateManyInput | PreorderCreateManyInput[]
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PreorderIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * preorder update
+   * Preorder update
    */
-  export type preorderUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the preorder
+     * Select specific fields to fetch from the Preorder
      */
-    select?: preorderSelect<ExtArgs> | null
+    select?: PreorderSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the preorder
+     * Omit specific fields from the Preorder
      */
-    omit?: preorderOmit<ExtArgs> | null
+    omit?: PreorderOmit<ExtArgs> | null
     /**
-     * The data needed to update a preorder.
+     * Choose, which related nodes to fetch as well
      */
-    data: XOR<preorderUpdateInput, preorderUncheckedUpdateInput>
+    include?: PreorderInclude<ExtArgs> | null
     /**
-     * Choose, which preorder to update.
+     * The data needed to update a Preorder.
      */
-    where: preorderWhereUniqueInput
+    data: XOR<PreorderUpdateInput, PreorderUncheckedUpdateInput>
+    /**
+     * Choose, which Preorder to update.
+     */
+    where: PreorderWhereUniqueInput
   }
 
   /**
-   * preorder updateMany
+   * Preorder updateMany
    */
-  export type preorderUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update preorders.
+     * The data used to update Preorders.
      */
-    data: XOR<preorderUpdateManyMutationInput, preorderUncheckedUpdateManyInput>
+    data: XOR<PreorderUpdateManyMutationInput, PreorderUncheckedUpdateManyInput>
     /**
-     * Filter which preorders to update
+     * Filter which Preorders to update
      */
-    where?: preorderWhereInput
+    where?: PreorderWhereInput
     /**
-     * Limit how many preorders to update.
+     * Limit how many Preorders to update.
      */
     limit?: number
   }
 
   /**
-   * preorder updateManyAndReturn
+   * Preorder updateManyAndReturn
    */
-  export type preorderUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the preorder
+     * Select specific fields to fetch from the Preorder
      */
-    select?: preorderSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: PreorderSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the preorder
+     * Omit specific fields from the Preorder
      */
-    omit?: preorderOmit<ExtArgs> | null
+    omit?: PreorderOmit<ExtArgs> | null
     /**
-     * The data used to update preorders.
+     * The data used to update Preorders.
      */
-    data: XOR<preorderUpdateManyMutationInput, preorderUncheckedUpdateManyInput>
+    data: XOR<PreorderUpdateManyMutationInput, PreorderUncheckedUpdateManyInput>
     /**
-     * Filter which preorders to update
+     * Filter which Preorders to update
      */
-    where?: preorderWhereInput
+    where?: PreorderWhereInput
     /**
-     * Limit how many preorders to update.
+     * Limit how many Preorders to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PreorderIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * Preorder upsert
+   */
+  export type PreorderUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Preorder
+     */
+    select?: PreorderSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Preorder
+     */
+    omit?: PreorderOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PreorderInclude<ExtArgs> | null
+    /**
+     * The filter to search for the Preorder to update in case it exists.
+     */
+    where: PreorderWhereUniqueInput
+    /**
+     * In case the Preorder found by the `where` argument doesn't exist, create a new Preorder with this data.
+     */
+    create: XOR<PreorderCreateInput, PreorderUncheckedCreateInput>
+    /**
+     * In case the Preorder was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<PreorderUpdateInput, PreorderUncheckedUpdateInput>
+  }
+
+  /**
+   * Preorder delete
+   */
+  export type PreorderDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Preorder
+     */
+    select?: PreorderSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Preorder
+     */
+    omit?: PreorderOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PreorderInclude<ExtArgs> | null
+    /**
+     * Filter which Preorder to delete.
+     */
+    where: PreorderWhereUniqueInput
+  }
+
+  /**
+   * Preorder deleteMany
+   */
+  export type PreorderDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Preorders to delete
+     */
+    where?: PreorderWhereInput
+    /**
+     * Limit how many Preorders to delete.
      */
     limit?: number
   }
 
   /**
-   * preorder upsert
+   * Preorder without action
    */
-  export type preorderUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type PreorderDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the preorder
+     * Select specific fields to fetch from the Preorder
      */
-    select?: preorderSelect<ExtArgs> | null
+    select?: PreorderSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the preorder
+     * Omit specific fields from the Preorder
      */
-    omit?: preorderOmit<ExtArgs> | null
+    omit?: PreorderOmit<ExtArgs> | null
     /**
-     * The filter to search for the preorder to update in case it exists.
+     * Choose, which related nodes to fetch as well
      */
-    where: preorderWhereUniqueInput
-    /**
-     * In case the preorder found by the `where` argument doesn't exist, create a new preorder with this data.
-     */
-    create: XOR<preorderCreateInput, preorderUncheckedCreateInput>
-    /**
-     * In case the preorder was found with the provided `where` argument, update it with this data.
-     */
-    update: XOR<preorderUpdateInput, preorderUncheckedUpdateInput>
-  }
-
-  /**
-   * preorder delete
-   */
-  export type preorderDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
-    /**
-     * Filter which preorder to delete.
-     */
-    where: preorderWhereUniqueInput
-  }
-
-  /**
-   * preorder deleteMany
-   */
-  export type preorderDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Filter which preorders to delete
-     */
-    where?: preorderWhereInput
-    /**
-     * Limit how many preorders to delete.
-     */
-    limit?: number
-  }
-
-  /**
-   * preorder without action
-   */
-  export type preorderDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the preorder
-     */
-    select?: preorderSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the preorder
-     */
-    omit?: preorderOmit<ExtArgs> | null
+    include?: PreorderInclude<ExtArgs> | null
   }
 
 
@@ -2285,6 +2425,8 @@ export namespace Prisma {
     kode?: boolean
     nama?: boolean
     deskripsi?: boolean
+    preorders?: boolean | Package$preordersArgs<ExtArgs>
+    _count?: boolean | PackageCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["package"]>
 
   export type PackageSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -2309,10 +2451,18 @@ export namespace Prisma {
   }
 
   export type PackageOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "kode" | "nama" | "deskripsi", ExtArgs["result"]["package"]>
+  export type PackageInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    preorders?: boolean | Package$preordersArgs<ExtArgs>
+    _count?: boolean | PackageCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type PackageIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type PackageIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $PackagePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Package"
-    objects: {}
+    objects: {
+      preorders: Prisma.$PreorderPayload<ExtArgs>[]
+    }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       kode: string
@@ -2712,6 +2862,7 @@ export namespace Prisma {
    */
   export interface Prisma__PackageClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    preorders<T extends Package$preordersArgs<ExtArgs> = {}>(args?: Subset<T, Package$preordersArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2762,6 +2913,10 @@ export namespace Prisma {
      */
     omit?: PackageOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PackageInclude<ExtArgs> | null
+    /**
      * Filter, which Package to fetch.
      */
     where: PackageWhereUniqueInput
@@ -2780,6 +2935,10 @@ export namespace Prisma {
      */
     omit?: PackageOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PackageInclude<ExtArgs> | null
+    /**
      * Filter, which Package to fetch.
      */
     where: PackageWhereUniqueInput
@@ -2797,6 +2956,10 @@ export namespace Prisma {
      * Omit specific fields from the Package
      */
     omit?: PackageOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PackageInclude<ExtArgs> | null
     /**
      * Filter, which Package to fetch.
      */
@@ -2846,6 +3009,10 @@ export namespace Prisma {
      */
     omit?: PackageOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PackageInclude<ExtArgs> | null
+    /**
      * Filter, which Package to fetch.
      */
     where?: PackageWhereInput
@@ -2894,6 +3061,10 @@ export namespace Prisma {
      */
     omit?: PackageOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PackageInclude<ExtArgs> | null
+    /**
      * Filter, which Packages to fetch.
      */
     where?: PackageWhereInput
@@ -2936,6 +3107,10 @@ export namespace Prisma {
      * Omit specific fields from the Package
      */
     omit?: PackageOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PackageInclude<ExtArgs> | null
     /**
      * The data needed to create a Package.
      */
@@ -2982,6 +3157,10 @@ export namespace Prisma {
      * Omit specific fields from the Package
      */
     omit?: PackageOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PackageInclude<ExtArgs> | null
     /**
      * The data needed to update a Package.
      */
@@ -3049,6 +3228,10 @@ export namespace Prisma {
      */
     omit?: PackageOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PackageInclude<ExtArgs> | null
+    /**
      * The filter to search for the Package to update in case it exists.
      */
     where: PackageWhereUniqueInput
@@ -3075,6 +3258,10 @@ export namespace Prisma {
      */
     omit?: PackageOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PackageInclude<ExtArgs> | null
+    /**
      * Filter which Package to delete.
      */
     where: PackageWhereUniqueInput
@@ -3095,6 +3282,30 @@ export namespace Prisma {
   }
 
   /**
+   * Package.preorders
+   */
+  export type Package$preordersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Preorder
+     */
+    select?: PreorderSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Preorder
+     */
+    omit?: PreorderOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PreorderInclude<ExtArgs> | null
+    where?: PreorderWhereInput
+    orderBy?: PreorderOrderByWithRelationInput | PreorderOrderByWithRelationInput[]
+    cursor?: PreorderWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: PreorderScalarFieldEnum | PreorderScalarFieldEnum[]
+  }
+
+  /**
    * Package without action
    */
   export type PackageDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -3106,11 +3317,15 @@ export namespace Prisma {
      * Omit specific fields from the Package
      */
     omit?: PackageOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PackageInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model customer
+   * Model Customer
    */
 
   export type AggregateCustomer = {
@@ -3190,37 +3405,37 @@ export namespace Prisma {
 
   export type CustomerAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which customer to aggregate.
+     * Filter which Customer to aggregate.
      */
-    where?: customerWhereInput
+    where?: CustomerWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of customers to fetch.
+     * Determine the order of Customers to fetch.
      */
-    orderBy?: customerOrderByWithRelationInput | customerOrderByWithRelationInput[]
+    orderBy?: CustomerOrderByWithRelationInput | CustomerOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: customerWhereUniqueInput
+    cursor?: CustomerWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` customers from the position of the cursor.
+     * Take `±n` Customers from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` customers.
+     * Skip the first `n` Customers.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned customers
+     * Count returned Customers
     **/
     _count?: true | CustomerCountAggregateInputType
     /**
@@ -3260,11 +3475,11 @@ export namespace Prisma {
 
 
 
-  export type customerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: customerWhereInput
-    orderBy?: customerOrderByWithAggregationInput | customerOrderByWithAggregationInput[]
+  export type CustomerGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CustomerWhereInput
+    orderBy?: CustomerOrderByWithAggregationInput | CustomerOrderByWithAggregationInput[]
     by: CustomerScalarFieldEnum[] | CustomerScalarFieldEnum
-    having?: customerScalarWhereWithAggregatesInput
+    having?: CustomerScalarWhereWithAggregatesInput
     take?: number
     skip?: number
     _count?: CustomerCountAggregateInputType | true
@@ -3287,7 +3502,7 @@ export namespace Prisma {
     _max: CustomerMaxAggregateOutputType | null
   }
 
-  type GetCustomerGroupByPayload<T extends customerGroupByArgs> = Prisma.PrismaPromise<
+  type GetCustomerGroupByPayload<T extends CustomerGroupByArgs> = Prisma.PrismaPromise<
     Array<
       PickEnumerable<CustomerGroupByOutputType, T['by']> &
         {
@@ -3301,7 +3516,17 @@ export namespace Prisma {
     >
 
 
-  export type customerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type CustomerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    name?: boolean
+    phone?: boolean
+    email?: boolean
+    createdAt?: boolean
+    preorders?: boolean | Customer$preordersArgs<ExtArgs>
+    _count?: boolean | CustomerCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["customer"]>
+
+  export type CustomerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     phone?: boolean
@@ -3309,7 +3534,7 @@ export namespace Prisma {
     createdAt?: boolean
   }, ExtArgs["result"]["customer"]>
 
-  export type customerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type CustomerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     phone?: boolean
@@ -3317,15 +3542,7 @@ export namespace Prisma {
     createdAt?: boolean
   }, ExtArgs["result"]["customer"]>
 
-  export type customerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
-    name?: boolean
-    phone?: boolean
-    email?: boolean
-    createdAt?: boolean
-  }, ExtArgs["result"]["customer"]>
-
-  export type customerSelectScalar = {
+  export type CustomerSelectScalar = {
     id?: boolean
     name?: boolean
     phone?: boolean
@@ -3333,11 +3550,19 @@ export namespace Prisma {
     createdAt?: boolean
   }
 
-  export type customerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "phone" | "email" | "createdAt", ExtArgs["result"]["customer"]>
+  export type CustomerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "phone" | "email" | "createdAt", ExtArgs["result"]["customer"]>
+  export type CustomerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    preorders?: boolean | Customer$preordersArgs<ExtArgs>
+    _count?: boolean | CustomerCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type CustomerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type CustomerIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
-  export type $customerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "customer"
-    objects: {}
+  export type $CustomerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Customer"
+    objects: {
+      preorders: Prisma.$PreorderPayload<ExtArgs>[]
+    }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       name: string
@@ -3348,18 +3573,18 @@ export namespace Prisma {
     composites: {}
   }
 
-  type customerGetPayload<S extends boolean | null | undefined | customerDefaultArgs> = $Result.GetResult<Prisma.$customerPayload, S>
+  type CustomerGetPayload<S extends boolean | null | undefined | CustomerDefaultArgs> = $Result.GetResult<Prisma.$CustomerPayload, S>
 
-  type customerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<customerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+  type CustomerCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<CustomerFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
       select?: CustomerCountAggregateInputType | true
     }
 
-  export interface customerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['customer'], meta: { name: 'customer' } }
+  export interface CustomerDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Customer'], meta: { name: 'Customer' } }
     /**
      * Find zero or one Customer that matches the filter.
-     * @param {customerFindUniqueArgs} args - Arguments to find a Customer
+     * @param {CustomerFindUniqueArgs} args - Arguments to find a Customer
      * @example
      * // Get one Customer
      * const customer = await prisma.customer.findUnique({
@@ -3368,12 +3593,12 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUnique<T extends customerFindUniqueArgs>(args: SelectSubset<T, customerFindUniqueArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends CustomerFindUniqueArgs>(args: SelectSubset<T, CustomerFindUniqueArgs<ExtArgs>>): Prisma__CustomerClient<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find one Customer that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {customerFindUniqueOrThrowArgs} args - Arguments to find a Customer
+     * @param {CustomerFindUniqueOrThrowArgs} args - Arguments to find a Customer
      * @example
      * // Get one Customer
      * const customer = await prisma.customer.findUniqueOrThrow({
@@ -3382,13 +3607,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUniqueOrThrow<T extends customerFindUniqueOrThrowArgs>(args: SelectSubset<T, customerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends CustomerFindUniqueOrThrowArgs>(args: SelectSubset<T, CustomerFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CustomerClient<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Customer that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerFindFirstArgs} args - Arguments to find a Customer
+     * @param {CustomerFindFirstArgs} args - Arguments to find a Customer
      * @example
      * // Get one Customer
      * const customer = await prisma.customer.findFirst({
@@ -3397,14 +3622,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirst<T extends customerFindFirstArgs>(args?: SelectSubset<T, customerFindFirstArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends CustomerFindFirstArgs>(args?: SelectSubset<T, CustomerFindFirstArgs<ExtArgs>>): Prisma__CustomerClient<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Customer that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerFindFirstOrThrowArgs} args - Arguments to find a Customer
+     * @param {CustomerFindFirstOrThrowArgs} args - Arguments to find a Customer
      * @example
      * // Get one Customer
      * const customer = await prisma.customer.findFirstOrThrow({
@@ -3413,13 +3638,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirstOrThrow<T extends customerFindFirstOrThrowArgs>(args?: SelectSubset<T, customerFindFirstOrThrowArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends CustomerFindFirstOrThrowArgs>(args?: SelectSubset<T, CustomerFindFirstOrThrowArgs<ExtArgs>>): Prisma__CustomerClient<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Customers that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {CustomerFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Customers
      * const customers = await prisma.customer.findMany()
@@ -3431,11 +3656,11 @@ export namespace Prisma {
      * const customerWithIdOnly = await prisma.customer.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends customerFindManyArgs>(args?: SelectSubset<T, customerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends CustomerFindManyArgs>(args?: SelectSubset<T, CustomerFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
      * Create a Customer.
-     * @param {customerCreateArgs} args - Arguments to create a Customer.
+     * @param {CustomerCreateArgs} args - Arguments to create a Customer.
      * @example
      * // Create one Customer
      * const Customer = await prisma.customer.create({
@@ -3445,11 +3670,11 @@ export namespace Prisma {
      * })
      * 
      */
-    create<T extends customerCreateArgs>(args: SelectSubset<T, customerCreateArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends CustomerCreateArgs>(args: SelectSubset<T, CustomerCreateArgs<ExtArgs>>): Prisma__CustomerClient<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Customers.
-     * @param {customerCreateManyArgs} args - Arguments to create many Customers.
+     * @param {CustomerCreateManyArgs} args - Arguments to create many Customers.
      * @example
      * // Create many Customers
      * const customer = await prisma.customer.createMany({
@@ -3459,11 +3684,11 @@ export namespace Prisma {
      * })
      *     
      */
-    createMany<T extends customerCreateManyArgs>(args?: SelectSubset<T, customerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends CustomerCreateManyArgs>(args?: SelectSubset<T, CustomerCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Customers and returns the data saved in the database.
-     * @param {customerCreateManyAndReturnArgs} args - Arguments to create many Customers.
+     * @param {CustomerCreateManyAndReturnArgs} args - Arguments to create many Customers.
      * @example
      * // Create many Customers
      * const customer = await prisma.customer.createManyAndReturn({
@@ -3483,11 +3708,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends customerCreateManyAndReturnArgs>(args?: SelectSubset<T, customerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends CustomerCreateManyAndReturnArgs>(args?: SelectSubset<T, CustomerCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Delete a Customer.
-     * @param {customerDeleteArgs} args - Arguments to delete one Customer.
+     * @param {CustomerDeleteArgs} args - Arguments to delete one Customer.
      * @example
      * // Delete one Customer
      * const Customer = await prisma.customer.delete({
@@ -3497,11 +3722,11 @@ export namespace Prisma {
      * })
      * 
      */
-    delete<T extends customerDeleteArgs>(args: SelectSubset<T, customerDeleteArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends CustomerDeleteArgs>(args: SelectSubset<T, CustomerDeleteArgs<ExtArgs>>): Prisma__CustomerClient<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Update one Customer.
-     * @param {customerUpdateArgs} args - Arguments to update one Customer.
+     * @param {CustomerUpdateArgs} args - Arguments to update one Customer.
      * @example
      * // Update one Customer
      * const customer = await prisma.customer.update({
@@ -3514,11 +3739,11 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends customerUpdateArgs>(args: SelectSubset<T, customerUpdateArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends CustomerUpdateArgs>(args: SelectSubset<T, CustomerUpdateArgs<ExtArgs>>): Prisma__CustomerClient<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Customers.
-     * @param {customerDeleteManyArgs} args - Arguments to filter Customers to delete.
+     * @param {CustomerDeleteManyArgs} args - Arguments to filter Customers to delete.
      * @example
      * // Delete a few Customers
      * const { count } = await prisma.customer.deleteMany({
@@ -3528,13 +3753,13 @@ export namespace Prisma {
      * })
      * 
      */
-    deleteMany<T extends customerDeleteManyArgs>(args?: SelectSubset<T, customerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends CustomerDeleteManyArgs>(args?: SelectSubset<T, CustomerDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Customers.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {CustomerUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Customers
      * const customer = await prisma.customer.updateMany({
@@ -3547,11 +3772,11 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends customerUpdateManyArgs>(args: SelectSubset<T, customerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends CustomerUpdateManyArgs>(args: SelectSubset<T, CustomerUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Customers and returns the data updated in the database.
-     * @param {customerUpdateManyAndReturnArgs} args - Arguments to update many Customers.
+     * @param {CustomerUpdateManyAndReturnArgs} args - Arguments to update many Customers.
      * @example
      * // Update many Customers
      * const customer = await prisma.customer.updateManyAndReturn({
@@ -3577,11 +3802,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends customerUpdateManyAndReturnArgs>(args: SelectSubset<T, customerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends CustomerUpdateManyAndReturnArgs>(args: SelectSubset<T, CustomerUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Customer.
-     * @param {customerUpsertArgs} args - Arguments to update or create a Customer.
+     * @param {CustomerUpsertArgs} args - Arguments to update or create a Customer.
      * @example
      * // Update or create a Customer
      * const customer = await prisma.customer.upsert({
@@ -3596,14 +3821,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    upsert<T extends customerUpsertArgs>(args: SelectSubset<T, customerUpsertArgs<ExtArgs>>): Prisma__customerClient<$Result.GetResult<Prisma.$customerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends CustomerUpsertArgs>(args: SelectSubset<T, CustomerUpsertArgs<ExtArgs>>): Prisma__CustomerClient<$Result.GetResult<Prisma.$CustomerPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Customers.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerCountArgs} args - Arguments to filter Customers to count.
+     * @param {CustomerCountArgs} args - Arguments to filter Customers to count.
      * @example
      * // Count the number of Customers
      * const count = await prisma.customer.count({
@@ -3612,8 +3837,8 @@ export namespace Prisma {
      *   }
      * })
     **/
-    count<T extends customerCountArgs>(
-      args?: Subset<T, customerCountArgs>,
+    count<T extends CustomerCountArgs>(
+      args?: Subset<T, CustomerCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
@@ -3652,7 +3877,7 @@ export namespace Prisma {
      * Group by Customer.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {customerGroupByArgs} args - Group by arguments.
+     * @param {CustomerGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -3667,14 +3892,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends customerGroupByArgs,
+      T extends CustomerGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: customerGroupByArgs['orderBy'] }
-        : { orderBy?: customerGroupByArgs['orderBy'] },
+        ? { orderBy: CustomerGroupByArgs['orderBy'] }
+        : { orderBy?: CustomerGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -3723,21 +3948,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, customerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCustomerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, CustomerGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCustomerGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the customer model
+   * Fields of the Customer model
    */
-  readonly fields: customerFieldRefs;
+  readonly fields: CustomerFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for customer.
+   * The delegate class that acts as a "Promise-like" for Customer.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__customerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__CustomerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    preorders<T extends Customer$preordersArgs<ExtArgs> = {}>(args?: Subset<T, Customer$preordersArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PreorderPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3764,375 +3990,439 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the customer model
+   * Fields of the Customer model
    */
-  interface customerFieldRefs {
-    readonly id: FieldRef<"customer", 'Int'>
-    readonly name: FieldRef<"customer", 'String'>
-    readonly phone: FieldRef<"customer", 'String'>
-    readonly email: FieldRef<"customer", 'String'>
-    readonly createdAt: FieldRef<"customer", 'DateTime'>
+  interface CustomerFieldRefs {
+    readonly id: FieldRef<"Customer", 'Int'>
+    readonly name: FieldRef<"Customer", 'String'>
+    readonly phone: FieldRef<"Customer", 'String'>
+    readonly email: FieldRef<"Customer", 'String'>
+    readonly createdAt: FieldRef<"Customer", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * customer findUnique
+   * Customer findUnique
    */
-  export type customerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Customer
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: CustomerSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Customer
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: CustomerOmit<ExtArgs> | null
     /**
-     * Filter, which customer to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where: customerWhereUniqueInput
+    include?: CustomerInclude<ExtArgs> | null
+    /**
+     * Filter, which Customer to fetch.
+     */
+    where: CustomerWhereUniqueInput
   }
 
   /**
-   * customer findUniqueOrThrow
+   * Customer findUniqueOrThrow
    */
-  export type customerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Customer
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: CustomerSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Customer
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: CustomerOmit<ExtArgs> | null
     /**
-     * Filter, which customer to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where: customerWhereUniqueInput
+    include?: CustomerInclude<ExtArgs> | null
+    /**
+     * Filter, which Customer to fetch.
+     */
+    where: CustomerWhereUniqueInput
   }
 
   /**
-   * customer findFirst
+   * Customer findFirst
    */
-  export type customerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Customer
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: CustomerSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Customer
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: CustomerOmit<ExtArgs> | null
     /**
-     * Filter, which customer to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: customerWhereInput
+    include?: CustomerInclude<ExtArgs> | null
+    /**
+     * Filter, which Customer to fetch.
+     */
+    where?: CustomerWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of customers to fetch.
+     * Determine the order of Customers to fetch.
      */
-    orderBy?: customerOrderByWithRelationInput | customerOrderByWithRelationInput[]
+    orderBy?: CustomerOrderByWithRelationInput | CustomerOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for customers.
+     * Sets the position for searching for Customers.
      */
-    cursor?: customerWhereUniqueInput
+    cursor?: CustomerWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` customers from the position of the cursor.
+     * Take `±n` Customers from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` customers.
+     * Skip the first `n` Customers.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of customers.
+     * Filter by unique combinations of Customers.
      */
     distinct?: CustomerScalarFieldEnum | CustomerScalarFieldEnum[]
   }
 
   /**
-   * customer findFirstOrThrow
+   * Customer findFirstOrThrow
    */
-  export type customerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Customer
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: CustomerSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Customer
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: CustomerOmit<ExtArgs> | null
     /**
-     * Filter, which customer to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: customerWhereInput
+    include?: CustomerInclude<ExtArgs> | null
+    /**
+     * Filter, which Customer to fetch.
+     */
+    where?: CustomerWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of customers to fetch.
+     * Determine the order of Customers to fetch.
      */
-    orderBy?: customerOrderByWithRelationInput | customerOrderByWithRelationInput[]
+    orderBy?: CustomerOrderByWithRelationInput | CustomerOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for customers.
+     * Sets the position for searching for Customers.
      */
-    cursor?: customerWhereUniqueInput
+    cursor?: CustomerWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` customers from the position of the cursor.
+     * Take `±n` Customers from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` customers.
+     * Skip the first `n` Customers.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of customers.
+     * Filter by unique combinations of Customers.
      */
     distinct?: CustomerScalarFieldEnum | CustomerScalarFieldEnum[]
   }
 
   /**
-   * customer findMany
+   * Customer findMany
    */
-  export type customerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Customer
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: CustomerSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Customer
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: CustomerOmit<ExtArgs> | null
     /**
-     * Filter, which customers to fetch.
+     * Choose, which related nodes to fetch as well
      */
-    where?: customerWhereInput
+    include?: CustomerInclude<ExtArgs> | null
+    /**
+     * Filter, which Customers to fetch.
+     */
+    where?: CustomerWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of customers to fetch.
+     * Determine the order of Customers to fetch.
      */
-    orderBy?: customerOrderByWithRelationInput | customerOrderByWithRelationInput[]
+    orderBy?: CustomerOrderByWithRelationInput | CustomerOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing customers.
+     * Sets the position for listing Customers.
      */
-    cursor?: customerWhereUniqueInput
+    cursor?: CustomerWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` customers from the position of the cursor.
+     * Take `±n` Customers from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` customers.
+     * Skip the first `n` Customers.
      */
     skip?: number
     distinct?: CustomerScalarFieldEnum | CustomerScalarFieldEnum[]
   }
 
   /**
-   * customer create
+   * Customer create
    */
-  export type customerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Customer
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: CustomerSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Customer
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: CustomerOmit<ExtArgs> | null
     /**
-     * The data needed to create a customer.
+     * Choose, which related nodes to fetch as well
      */
-    data: XOR<customerCreateInput, customerUncheckedCreateInput>
+    include?: CustomerInclude<ExtArgs> | null
+    /**
+     * The data needed to create a Customer.
+     */
+    data: XOR<CustomerCreateInput, CustomerUncheckedCreateInput>
   }
 
   /**
-   * customer createMany
+   * Customer createMany
    */
-  export type customerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many customers.
+     * The data used to create many Customers.
      */
-    data: customerCreateManyInput | customerCreateManyInput[]
+    data: CustomerCreateManyInput | CustomerCreateManyInput[]
   }
 
   /**
-   * customer createManyAndReturn
+   * Customer createManyAndReturn
    */
-  export type customerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Customer
      */
-    select?: customerSelectCreateManyAndReturn<ExtArgs> | null
+    select?: CustomerSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Customer
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: CustomerOmit<ExtArgs> | null
     /**
-     * The data used to create many customers.
+     * The data used to create many Customers.
      */
-    data: customerCreateManyInput | customerCreateManyInput[]
+    data: CustomerCreateManyInput | CustomerCreateManyInput[]
   }
 
   /**
-   * customer update
+   * Customer update
    */
-  export type customerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Customer
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: CustomerSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Customer
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: CustomerOmit<ExtArgs> | null
     /**
-     * The data needed to update a customer.
+     * Choose, which related nodes to fetch as well
      */
-    data: XOR<customerUpdateInput, customerUncheckedUpdateInput>
+    include?: CustomerInclude<ExtArgs> | null
     /**
-     * Choose, which customer to update.
+     * The data needed to update a Customer.
      */
-    where: customerWhereUniqueInput
+    data: XOR<CustomerUpdateInput, CustomerUncheckedUpdateInput>
+    /**
+     * Choose, which Customer to update.
+     */
+    where: CustomerWhereUniqueInput
   }
 
   /**
-   * customer updateMany
+   * Customer updateMany
    */
-  export type customerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update customers.
+     * The data used to update Customers.
      */
-    data: XOR<customerUpdateManyMutationInput, customerUncheckedUpdateManyInput>
+    data: XOR<CustomerUpdateManyMutationInput, CustomerUncheckedUpdateManyInput>
     /**
-     * Filter which customers to update
+     * Filter which Customers to update
      */
-    where?: customerWhereInput
+    where?: CustomerWhereInput
     /**
-     * Limit how many customers to update.
+     * Limit how many Customers to update.
      */
     limit?: number
   }
 
   /**
-   * customer updateManyAndReturn
+   * Customer updateManyAndReturn
    */
-  export type customerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Customer
      */
-    select?: customerSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: CustomerSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Customer
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: CustomerOmit<ExtArgs> | null
     /**
-     * The data used to update customers.
+     * The data used to update Customers.
      */
-    data: XOR<customerUpdateManyMutationInput, customerUncheckedUpdateManyInput>
+    data: XOR<CustomerUpdateManyMutationInput, CustomerUncheckedUpdateManyInput>
     /**
-     * Filter which customers to update
+     * Filter which Customers to update
      */
-    where?: customerWhereInput
+    where?: CustomerWhereInput
     /**
-     * Limit how many customers to update.
+     * Limit how many Customers to update.
      */
     limit?: number
   }
 
   /**
-   * customer upsert
+   * Customer upsert
    */
-  export type customerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Customer
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: CustomerSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Customer
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: CustomerOmit<ExtArgs> | null
     /**
-     * The filter to search for the customer to update in case it exists.
+     * Choose, which related nodes to fetch as well
      */
-    where: customerWhereUniqueInput
+    include?: CustomerInclude<ExtArgs> | null
     /**
-     * In case the customer found by the `where` argument doesn't exist, create a new customer with this data.
+     * The filter to search for the Customer to update in case it exists.
      */
-    create: XOR<customerCreateInput, customerUncheckedCreateInput>
+    where: CustomerWhereUniqueInput
     /**
-     * In case the customer was found with the provided `where` argument, update it with this data.
+     * In case the Customer found by the `where` argument doesn't exist, create a new Customer with this data.
      */
-    update: XOR<customerUpdateInput, customerUncheckedUpdateInput>
+    create: XOR<CustomerCreateInput, CustomerUncheckedCreateInput>
+    /**
+     * In case the Customer was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<CustomerUpdateInput, CustomerUncheckedUpdateInput>
   }
 
   /**
-   * customer delete
+   * Customer delete
    */
-  export type customerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Customer
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: CustomerSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Customer
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: CustomerOmit<ExtArgs> | null
     /**
-     * Filter which customer to delete.
+     * Choose, which related nodes to fetch as well
      */
-    where: customerWhereUniqueInput
+    include?: CustomerInclude<ExtArgs> | null
+    /**
+     * Filter which Customer to delete.
+     */
+    where: CustomerWhereUniqueInput
   }
 
   /**
-   * customer deleteMany
+   * Customer deleteMany
    */
-  export type customerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CustomerDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which customers to delete
+     * Filter which Customers to delete
      */
-    where?: customerWhereInput
+    where?: CustomerWhereInput
     /**
-     * Limit how many customers to delete.
+     * Limit how many Customers to delete.
      */
     limit?: number
   }
 
   /**
-   * customer without action
+   * Customer.preorders
    */
-  export type customerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Customer$preordersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the customer
+     * Select specific fields to fetch from the Preorder
      */
-    select?: customerSelect<ExtArgs> | null
+    select?: PreorderSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the customer
+     * Omit specific fields from the Preorder
      */
-    omit?: customerOmit<ExtArgs> | null
+    omit?: PreorderOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PreorderInclude<ExtArgs> | null
+    where?: PreorderWhereInput
+    orderBy?: PreorderOrderByWithRelationInput | PreorderOrderByWithRelationInput[]
+    cursor?: PreorderWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: PreorderScalarFieldEnum | PreorderScalarFieldEnum[]
+  }
+
+  /**
+   * Customer without action
+   */
+  export type CustomerDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Customer
+     */
+    select?: CustomerSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Customer
+     */
+    omit?: CustomerOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CustomerInclude<ExtArgs> | null
   }
 
 
@@ -4216,16 +4506,16 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'String'
+   * Reference to a field of type 'Boolean'
    */
-  export type StringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'String'>
+  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
     
 
 
   /**
-   * Reference to a field of type 'Boolean'
+   * Reference to a field of type 'String'
    */
-  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
+  export type StringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'String'>
     
 
 
@@ -4239,63 +4529,69 @@ export namespace Prisma {
    */
 
 
-  export type preorderWhereInput = {
-    AND?: preorderWhereInput | preorderWhereInput[]
-    OR?: preorderWhereInput[]
-    NOT?: preorderWhereInput | preorderWhereInput[]
-    id?: IntFilter<"preorder"> | number
-    order_date?: DateTimeFilter<"preorder"> | Date | string
-    order_by?: StringFilter<"preorder"> | string
-    selected_package?: StringFilter<"preorder"> | string
-    qty?: IntFilter<"preorder"> | number
-    is_paid?: BoolFilter<"preorder"> | boolean
+  export type PreorderWhereInput = {
+    AND?: PreorderWhereInput | PreorderWhereInput[]
+    OR?: PreorderWhereInput[]
+    NOT?: PreorderWhereInput | PreorderWhereInput[]
+    id?: IntFilter<"Preorder"> | number
+    order_date?: DateTimeFilter<"Preorder"> | Date | string
+    order_by?: IntFilter<"Preorder"> | number
+    selected_package?: IntFilter<"Preorder"> | number
+    qty?: IntFilter<"Preorder"> | number
+    is_paid?: BoolFilter<"Preorder"> | boolean
+    package?: XOR<PackageScalarRelationFilter, PackageWhereInput>
+    customer?: XOR<CustomerScalarRelationFilter, CustomerWhereInput>
   }
 
-  export type preorderOrderByWithRelationInput = {
+  export type PreorderOrderByWithRelationInput = {
     id?: SortOrder
     order_date?: SortOrder
     order_by?: SortOrder
     selected_package?: SortOrder
     qty?: SortOrder
     is_paid?: SortOrder
+    package?: PackageOrderByWithRelationInput
+    customer?: CustomerOrderByWithRelationInput
   }
 
-  export type preorderWhereUniqueInput = Prisma.AtLeast<{
+  export type PreorderWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: preorderWhereInput | preorderWhereInput[]
-    OR?: preorderWhereInput[]
-    NOT?: preorderWhereInput | preorderWhereInput[]
-    order_date?: DateTimeFilter<"preorder"> | Date | string
-    order_by?: StringFilter<"preorder"> | string
-    selected_package?: StringFilter<"preorder"> | string
-    qty?: IntFilter<"preorder"> | number
-    is_paid?: BoolFilter<"preorder"> | boolean
+    AND?: PreorderWhereInput | PreorderWhereInput[]
+    OR?: PreorderWhereInput[]
+    NOT?: PreorderWhereInput | PreorderWhereInput[]
+    order_date?: DateTimeFilter<"Preorder"> | Date | string
+    order_by?: IntFilter<"Preorder"> | number
+    selected_package?: IntFilter<"Preorder"> | number
+    qty?: IntFilter<"Preorder"> | number
+    is_paid?: BoolFilter<"Preorder"> | boolean
+    package?: XOR<PackageScalarRelationFilter, PackageWhereInput>
+    customer?: XOR<CustomerScalarRelationFilter, CustomerWhereInput>
   }, "id">
 
-  export type preorderOrderByWithAggregationInput = {
+  export type PreorderOrderByWithAggregationInput = {
     id?: SortOrder
     order_date?: SortOrder
     order_by?: SortOrder
     selected_package?: SortOrder
     qty?: SortOrder
     is_paid?: SortOrder
-    _count?: preorderCountOrderByAggregateInput
-    _avg?: preorderAvgOrderByAggregateInput
-    _max?: preorderMaxOrderByAggregateInput
-    _min?: preorderMinOrderByAggregateInput
-    _sum?: preorderSumOrderByAggregateInput
+    _count?: PreorderCountOrderByAggregateInput
+    _avg?: PreorderAvgOrderByAggregateInput
+    _max?: PreorderMaxOrderByAggregateInput
+    _min?: PreorderMinOrderByAggregateInput
+    _sum?: PreorderSumOrderByAggregateInput
   }
 
-  export type preorderScalarWhereWithAggregatesInput = {
-    AND?: preorderScalarWhereWithAggregatesInput | preorderScalarWhereWithAggregatesInput[]
-    OR?: preorderScalarWhereWithAggregatesInput[]
-    NOT?: preorderScalarWhereWithAggregatesInput | preorderScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"preorder"> | number
-    order_date?: DateTimeWithAggregatesFilter<"preorder"> | Date | string
-    order_by?: StringWithAggregatesFilter<"preorder"> | string
-    selected_package?: StringWithAggregatesFilter<"preorder"> | string
-    qty?: IntWithAggregatesFilter<"preorder"> | number
-    is_paid?: BoolWithAggregatesFilter<"preorder"> | boolean
+  export type PreorderScalarWhereWithAggregatesInput = {
+    AND?: PreorderScalarWhereWithAggregatesInput | PreorderScalarWhereWithAggregatesInput[]
+    OR?: PreorderScalarWhereWithAggregatesInput[]
+    NOT?: PreorderScalarWhereWithAggregatesInput | PreorderScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Preorder"> | number
+    order_date?: DateTimeWithAggregatesFilter<"Preorder"> | Date | string
+    order_by?: IntWithAggregatesFilter<"Preorder"> | number
+    selected_package?: IntWithAggregatesFilter<"Preorder"> | number
+    qty?: IntWithAggregatesFilter<"Preorder"> | number
+    is_paid?: BoolWithAggregatesFilter<"Preorder"> | boolean
   }
 
   export type PackageWhereInput = {
@@ -4306,6 +4602,7 @@ export namespace Prisma {
     kode?: StringFilter<"Package"> | string
     nama?: StringFilter<"Package"> | string
     deskripsi?: StringFilter<"Package"> | string
+    preorders?: PreorderListRelationFilter
   }
 
   export type PackageOrderByWithRelationInput = {
@@ -4313,6 +4610,7 @@ export namespace Prisma {
     kode?: SortOrder
     nama?: SortOrder
     deskripsi?: SortOrder
+    preorders?: PreorderOrderByRelationAggregateInput
   }
 
   export type PackageWhereUniqueInput = Prisma.AtLeast<{
@@ -4323,6 +4621,7 @@ export namespace Prisma {
     NOT?: PackageWhereInput | PackageWhereInput[]
     nama?: StringFilter<"Package"> | string
     deskripsi?: StringFilter<"Package"> | string
+    preorders?: PreorderListRelationFilter
   }, "id" | "kode">
 
   export type PackageOrderByWithAggregationInput = {
@@ -4347,116 +4646,117 @@ export namespace Prisma {
     deskripsi?: StringWithAggregatesFilter<"Package"> | string
   }
 
-  export type customerWhereInput = {
-    AND?: customerWhereInput | customerWhereInput[]
-    OR?: customerWhereInput[]
-    NOT?: customerWhereInput | customerWhereInput[]
-    id?: IntFilter<"customer"> | number
-    name?: StringFilter<"customer"> | string
-    phone?: StringFilter<"customer"> | string
-    email?: StringNullableFilter<"customer"> | string | null
-    createdAt?: DateTimeFilter<"customer"> | Date | string
+  export type CustomerWhereInput = {
+    AND?: CustomerWhereInput | CustomerWhereInput[]
+    OR?: CustomerWhereInput[]
+    NOT?: CustomerWhereInput | CustomerWhereInput[]
+    id?: IntFilter<"Customer"> | number
+    name?: StringFilter<"Customer"> | string
+    phone?: StringFilter<"Customer"> | string
+    email?: StringNullableFilter<"Customer"> | string | null
+    createdAt?: DateTimeFilter<"Customer"> | Date | string
+    preorders?: PreorderListRelationFilter
   }
 
-  export type customerOrderByWithRelationInput = {
+  export type CustomerOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
     phone?: SortOrder
     email?: SortOrderInput | SortOrder
     createdAt?: SortOrder
+    preorders?: PreorderOrderByRelationAggregateInput
   }
 
-  export type customerWhereUniqueInput = Prisma.AtLeast<{
+  export type CustomerWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: customerWhereInput | customerWhereInput[]
-    OR?: customerWhereInput[]
-    NOT?: customerWhereInput | customerWhereInput[]
-    name?: StringFilter<"customer"> | string
-    phone?: StringFilter<"customer"> | string
-    email?: StringNullableFilter<"customer"> | string | null
-    createdAt?: DateTimeFilter<"customer"> | Date | string
+    AND?: CustomerWhereInput | CustomerWhereInput[]
+    OR?: CustomerWhereInput[]
+    NOT?: CustomerWhereInput | CustomerWhereInput[]
+    name?: StringFilter<"Customer"> | string
+    phone?: StringFilter<"Customer"> | string
+    email?: StringNullableFilter<"Customer"> | string | null
+    createdAt?: DateTimeFilter<"Customer"> | Date | string
+    preorders?: PreorderListRelationFilter
   }, "id">
 
-  export type customerOrderByWithAggregationInput = {
+  export type CustomerOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
     phone?: SortOrder
     email?: SortOrderInput | SortOrder
     createdAt?: SortOrder
-    _count?: customerCountOrderByAggregateInput
-    _avg?: customerAvgOrderByAggregateInput
-    _max?: customerMaxOrderByAggregateInput
-    _min?: customerMinOrderByAggregateInput
-    _sum?: customerSumOrderByAggregateInput
+    _count?: CustomerCountOrderByAggregateInput
+    _avg?: CustomerAvgOrderByAggregateInput
+    _max?: CustomerMaxOrderByAggregateInput
+    _min?: CustomerMinOrderByAggregateInput
+    _sum?: CustomerSumOrderByAggregateInput
   }
 
-  export type customerScalarWhereWithAggregatesInput = {
-    AND?: customerScalarWhereWithAggregatesInput | customerScalarWhereWithAggregatesInput[]
-    OR?: customerScalarWhereWithAggregatesInput[]
-    NOT?: customerScalarWhereWithAggregatesInput | customerScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"customer"> | number
-    name?: StringWithAggregatesFilter<"customer"> | string
-    phone?: StringWithAggregatesFilter<"customer"> | string
-    email?: StringNullableWithAggregatesFilter<"customer"> | string | null
-    createdAt?: DateTimeWithAggregatesFilter<"customer"> | Date | string
+  export type CustomerScalarWhereWithAggregatesInput = {
+    AND?: CustomerScalarWhereWithAggregatesInput | CustomerScalarWhereWithAggregatesInput[]
+    OR?: CustomerScalarWhereWithAggregatesInput[]
+    NOT?: CustomerScalarWhereWithAggregatesInput | CustomerScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Customer"> | number
+    name?: StringWithAggregatesFilter<"Customer"> | string
+    phone?: StringWithAggregatesFilter<"Customer"> | string
+    email?: StringNullableWithAggregatesFilter<"Customer"> | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"Customer"> | Date | string
   }
 
-  export type preorderCreateInput = {
+  export type PreorderCreateInput = {
     order_date: Date | string
-    order_by: string
-    selected_package: string
     qty: number
     is_paid: boolean
+    package: PackageCreateNestedOneWithoutPreordersInput
+    customer: CustomerCreateNestedOneWithoutPreordersInput
   }
 
-  export type preorderUncheckedCreateInput = {
+  export type PreorderUncheckedCreateInput = {
     id?: number
     order_date: Date | string
-    order_by: string
-    selected_package: string
+    order_by: number
+    selected_package: number
     qty: number
     is_paid: boolean
   }
 
-  export type preorderUpdateInput = {
+  export type PreorderUpdateInput = {
     order_date?: DateTimeFieldUpdateOperationsInput | Date | string
-    order_by?: StringFieldUpdateOperationsInput | string
-    selected_package?: StringFieldUpdateOperationsInput | string
     qty?: IntFieldUpdateOperationsInput | number
     is_paid?: BoolFieldUpdateOperationsInput | boolean
+    package?: PackageUpdateOneRequiredWithoutPreordersNestedInput
+    customer?: CustomerUpdateOneRequiredWithoutPreordersNestedInput
   }
 
-  export type preorderUncheckedUpdateInput = {
+  export type PreorderUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     order_date?: DateTimeFieldUpdateOperationsInput | Date | string
-    order_by?: StringFieldUpdateOperationsInput | string
-    selected_package?: StringFieldUpdateOperationsInput | string
+    order_by?: IntFieldUpdateOperationsInput | number
+    selected_package?: IntFieldUpdateOperationsInput | number
     qty?: IntFieldUpdateOperationsInput | number
     is_paid?: BoolFieldUpdateOperationsInput | boolean
   }
 
-  export type preorderCreateManyInput = {
+  export type PreorderCreateManyInput = {
     id?: number
     order_date: Date | string
-    order_by: string
-    selected_package: string
+    order_by: number
+    selected_package: number
     qty: number
     is_paid: boolean
   }
 
-  export type preorderUpdateManyMutationInput = {
+  export type PreorderUpdateManyMutationInput = {
     order_date?: DateTimeFieldUpdateOperationsInput | Date | string
-    order_by?: StringFieldUpdateOperationsInput | string
-    selected_package?: StringFieldUpdateOperationsInput | string
     qty?: IntFieldUpdateOperationsInput | number
     is_paid?: BoolFieldUpdateOperationsInput | boolean
   }
 
-  export type preorderUncheckedUpdateManyInput = {
+  export type PreorderUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     order_date?: DateTimeFieldUpdateOperationsInput | Date | string
-    order_by?: StringFieldUpdateOperationsInput | string
-    selected_package?: StringFieldUpdateOperationsInput | string
+    order_by?: IntFieldUpdateOperationsInput | number
+    selected_package?: IntFieldUpdateOperationsInput | number
     qty?: IntFieldUpdateOperationsInput | number
     is_paid?: BoolFieldUpdateOperationsInput | boolean
   }
@@ -4465,6 +4765,7 @@ export namespace Prisma {
     kode: string
     nama: string
     deskripsi: string
+    preorders?: PreorderCreateNestedManyWithoutPackageInput
   }
 
   export type PackageUncheckedCreateInput = {
@@ -4472,12 +4773,14 @@ export namespace Prisma {
     kode: string
     nama: string
     deskripsi: string
+    preorders?: PreorderUncheckedCreateNestedManyWithoutPackageInput
   }
 
   export type PackageUpdateInput = {
     kode?: StringFieldUpdateOperationsInput | string
     nama?: StringFieldUpdateOperationsInput | string
     deskripsi?: StringFieldUpdateOperationsInput | string
+    preorders?: PreorderUpdateManyWithoutPackageNestedInput
   }
 
   export type PackageUncheckedUpdateInput = {
@@ -4485,6 +4788,7 @@ export namespace Prisma {
     kode?: StringFieldUpdateOperationsInput | string
     nama?: StringFieldUpdateOperationsInput | string
     deskripsi?: StringFieldUpdateOperationsInput | string
+    preorders?: PreorderUncheckedUpdateManyWithoutPackageNestedInput
   }
 
   export type PackageCreateManyInput = {
@@ -4507,37 +4811,41 @@ export namespace Prisma {
     deskripsi?: StringFieldUpdateOperationsInput | string
   }
 
-  export type customerCreateInput = {
+  export type CustomerCreateInput = {
     name: string
     phone: string
     email?: string | null
     createdAt?: Date | string
+    preorders?: PreorderCreateNestedManyWithoutCustomerInput
   }
 
-  export type customerUncheckedCreateInput = {
+  export type CustomerUncheckedCreateInput = {
     id?: number
     name: string
     phone: string
     email?: string | null
     createdAt?: Date | string
+    preorders?: PreorderUncheckedCreateNestedManyWithoutCustomerInput
   }
 
-  export type customerUpdateInput = {
+  export type CustomerUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    preorders?: PreorderUpdateManyWithoutCustomerNestedInput
   }
 
-  export type customerUncheckedUpdateInput = {
+  export type CustomerUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    preorders?: PreorderUncheckedUpdateManyWithoutCustomerNestedInput
   }
 
-  export type customerCreateManyInput = {
+  export type CustomerCreateManyInput = {
     id?: number
     name: string
     phone: string
@@ -4545,14 +4853,14 @@ export namespace Prisma {
     createdAt?: Date | string
   }
 
-  export type customerUpdateManyMutationInput = {
+  export type CustomerUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
     email?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type customerUncheckedUpdateManyInput = {
+  export type CustomerUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     phone?: StringFieldUpdateOperationsInput | string
@@ -4582,26 +4890,22 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type StringFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel>
-    in?: string[]
-    notIn?: string[]
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringFilter<$PrismaModel> | string
-  }
-
   export type BoolFilter<$PrismaModel = never> = {
     equals?: boolean | BooleanFieldRefInput<$PrismaModel>
     not?: NestedBoolFilter<$PrismaModel> | boolean
   }
 
-  export type preorderCountOrderByAggregateInput = {
+  export type PackageScalarRelationFilter = {
+    is?: PackageWhereInput
+    isNot?: PackageWhereInput
+  }
+
+  export type CustomerScalarRelationFilter = {
+    is?: CustomerWhereInput
+    isNot?: CustomerWhereInput
+  }
+
+  export type PreorderCountOrderByAggregateInput = {
     id?: SortOrder
     order_date?: SortOrder
     order_by?: SortOrder
@@ -4610,12 +4914,14 @@ export namespace Prisma {
     is_paid?: SortOrder
   }
 
-  export type preorderAvgOrderByAggregateInput = {
+  export type PreorderAvgOrderByAggregateInput = {
     id?: SortOrder
+    order_by?: SortOrder
+    selected_package?: SortOrder
     qty?: SortOrder
   }
 
-  export type preorderMaxOrderByAggregateInput = {
+  export type PreorderMaxOrderByAggregateInput = {
     id?: SortOrder
     order_date?: SortOrder
     order_by?: SortOrder
@@ -4624,7 +4930,7 @@ export namespace Prisma {
     is_paid?: SortOrder
   }
 
-  export type preorderMinOrderByAggregateInput = {
+  export type PreorderMinOrderByAggregateInput = {
     id?: SortOrder
     order_date?: SortOrder
     order_by?: SortOrder
@@ -4633,8 +4939,10 @@ export namespace Prisma {
     is_paid?: SortOrder
   }
 
-  export type preorderSumOrderByAggregateInput = {
+  export type PreorderSumOrderByAggregateInput = {
     id?: SortOrder
+    order_by?: SortOrder
+    selected_package?: SortOrder
     qty?: SortOrder
   }
 
@@ -4668,7 +4976,15 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type StringWithAggregatesFilter<$PrismaModel = never> = {
+  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[]
     notIn?: string[]
@@ -4679,18 +4995,17 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringWithAggregatesFilter<$PrismaModel> | string
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedStringFilter<$PrismaModel>
-    _max?: NestedStringFilter<$PrismaModel>
+    not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedBoolFilter<$PrismaModel>
-    _max?: NestedBoolFilter<$PrismaModel>
+  export type PreorderListRelationFilter = {
+    every?: PreorderWhereInput
+    some?: PreorderWhereInput
+    none?: PreorderWhereInput
+  }
+
+  export type PreorderOrderByRelationAggregateInput = {
+    _count?: SortOrder
   }
 
   export type PackageCountOrderByAggregateInput = {
@@ -4722,6 +5037,23 @@ export namespace Prisma {
     id?: SortOrder
   }
 
+  export type StringWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel>
+    in?: string[]
+    notIn?: string[]
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringWithAggregatesFilter<$PrismaModel> | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedStringFilter<$PrismaModel>
+    _max?: NestedStringFilter<$PrismaModel>
+  }
+
   export type StringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | null
@@ -4741,7 +5073,7 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type customerCountOrderByAggregateInput = {
+  export type CustomerCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     phone?: SortOrder
@@ -4749,19 +5081,11 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
-  export type customerAvgOrderByAggregateInput = {
+  export type CustomerAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type customerMaxOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
-    phone?: SortOrder
-    email?: SortOrder
-    createdAt?: SortOrder
-  }
-
-  export type customerMinOrderByAggregateInput = {
+  export type CustomerMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     phone?: SortOrder
@@ -4769,7 +5093,15 @@ export namespace Prisma {
     createdAt?: SortOrder
   }
 
-  export type customerSumOrderByAggregateInput = {
+  export type CustomerMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    phone?: SortOrder
+    email?: SortOrder
+    createdAt?: SortOrder
+  }
+
+  export type CustomerSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -4790,12 +5122,20 @@ export namespace Prisma {
     _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
-  export type DateTimeFieldUpdateOperationsInput = {
-    set?: Date | string
+  export type PackageCreateNestedOneWithoutPreordersInput = {
+    create?: XOR<PackageCreateWithoutPreordersInput, PackageUncheckedCreateWithoutPreordersInput>
+    connectOrCreate?: PackageCreateOrConnectWithoutPreordersInput
+    connect?: PackageWhereUniqueInput
   }
 
-  export type StringFieldUpdateOperationsInput = {
-    set?: string
+  export type CustomerCreateNestedOneWithoutPreordersInput = {
+    create?: XOR<CustomerCreateWithoutPreordersInput, CustomerUncheckedCreateWithoutPreordersInput>
+    connectOrCreate?: CustomerCreateOrConnectWithoutPreordersInput
+    connect?: CustomerWhereUniqueInput
+  }
+
+  export type DateTimeFieldUpdateOperationsInput = {
+    set?: Date | string
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -4810,8 +5150,112 @@ export namespace Prisma {
     set?: boolean
   }
 
+  export type PackageUpdateOneRequiredWithoutPreordersNestedInput = {
+    create?: XOR<PackageCreateWithoutPreordersInput, PackageUncheckedCreateWithoutPreordersInput>
+    connectOrCreate?: PackageCreateOrConnectWithoutPreordersInput
+    upsert?: PackageUpsertWithoutPreordersInput
+    connect?: PackageWhereUniqueInput
+    update?: XOR<XOR<PackageUpdateToOneWithWhereWithoutPreordersInput, PackageUpdateWithoutPreordersInput>, PackageUncheckedUpdateWithoutPreordersInput>
+  }
+
+  export type CustomerUpdateOneRequiredWithoutPreordersNestedInput = {
+    create?: XOR<CustomerCreateWithoutPreordersInput, CustomerUncheckedCreateWithoutPreordersInput>
+    connectOrCreate?: CustomerCreateOrConnectWithoutPreordersInput
+    upsert?: CustomerUpsertWithoutPreordersInput
+    connect?: CustomerWhereUniqueInput
+    update?: XOR<XOR<CustomerUpdateToOneWithWhereWithoutPreordersInput, CustomerUpdateWithoutPreordersInput>, CustomerUncheckedUpdateWithoutPreordersInput>
+  }
+
+  export type PreorderCreateNestedManyWithoutPackageInput = {
+    create?: XOR<PreorderCreateWithoutPackageInput, PreorderUncheckedCreateWithoutPackageInput> | PreorderCreateWithoutPackageInput[] | PreorderUncheckedCreateWithoutPackageInput[]
+    connectOrCreate?: PreorderCreateOrConnectWithoutPackageInput | PreorderCreateOrConnectWithoutPackageInput[]
+    createMany?: PreorderCreateManyPackageInputEnvelope
+    connect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+  }
+
+  export type PreorderUncheckedCreateNestedManyWithoutPackageInput = {
+    create?: XOR<PreorderCreateWithoutPackageInput, PreorderUncheckedCreateWithoutPackageInput> | PreorderCreateWithoutPackageInput[] | PreorderUncheckedCreateWithoutPackageInput[]
+    connectOrCreate?: PreorderCreateOrConnectWithoutPackageInput | PreorderCreateOrConnectWithoutPackageInput[]
+    createMany?: PreorderCreateManyPackageInputEnvelope
+    connect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+  }
+
+  export type StringFieldUpdateOperationsInput = {
+    set?: string
+  }
+
+  export type PreorderUpdateManyWithoutPackageNestedInput = {
+    create?: XOR<PreorderCreateWithoutPackageInput, PreorderUncheckedCreateWithoutPackageInput> | PreorderCreateWithoutPackageInput[] | PreorderUncheckedCreateWithoutPackageInput[]
+    connectOrCreate?: PreorderCreateOrConnectWithoutPackageInput | PreorderCreateOrConnectWithoutPackageInput[]
+    upsert?: PreorderUpsertWithWhereUniqueWithoutPackageInput | PreorderUpsertWithWhereUniqueWithoutPackageInput[]
+    createMany?: PreorderCreateManyPackageInputEnvelope
+    set?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    disconnect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    delete?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    connect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    update?: PreorderUpdateWithWhereUniqueWithoutPackageInput | PreorderUpdateWithWhereUniqueWithoutPackageInput[]
+    updateMany?: PreorderUpdateManyWithWhereWithoutPackageInput | PreorderUpdateManyWithWhereWithoutPackageInput[]
+    deleteMany?: PreorderScalarWhereInput | PreorderScalarWhereInput[]
+  }
+
+  export type PreorderUncheckedUpdateManyWithoutPackageNestedInput = {
+    create?: XOR<PreorderCreateWithoutPackageInput, PreorderUncheckedCreateWithoutPackageInput> | PreorderCreateWithoutPackageInput[] | PreorderUncheckedCreateWithoutPackageInput[]
+    connectOrCreate?: PreorderCreateOrConnectWithoutPackageInput | PreorderCreateOrConnectWithoutPackageInput[]
+    upsert?: PreorderUpsertWithWhereUniqueWithoutPackageInput | PreorderUpsertWithWhereUniqueWithoutPackageInput[]
+    createMany?: PreorderCreateManyPackageInputEnvelope
+    set?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    disconnect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    delete?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    connect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    update?: PreorderUpdateWithWhereUniqueWithoutPackageInput | PreorderUpdateWithWhereUniqueWithoutPackageInput[]
+    updateMany?: PreorderUpdateManyWithWhereWithoutPackageInput | PreorderUpdateManyWithWhereWithoutPackageInput[]
+    deleteMany?: PreorderScalarWhereInput | PreorderScalarWhereInput[]
+  }
+
+  export type PreorderCreateNestedManyWithoutCustomerInput = {
+    create?: XOR<PreorderCreateWithoutCustomerInput, PreorderUncheckedCreateWithoutCustomerInput> | PreorderCreateWithoutCustomerInput[] | PreorderUncheckedCreateWithoutCustomerInput[]
+    connectOrCreate?: PreorderCreateOrConnectWithoutCustomerInput | PreorderCreateOrConnectWithoutCustomerInput[]
+    createMany?: PreorderCreateManyCustomerInputEnvelope
+    connect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+  }
+
+  export type PreorderUncheckedCreateNestedManyWithoutCustomerInput = {
+    create?: XOR<PreorderCreateWithoutCustomerInput, PreorderUncheckedCreateWithoutCustomerInput> | PreorderCreateWithoutCustomerInput[] | PreorderUncheckedCreateWithoutCustomerInput[]
+    connectOrCreate?: PreorderCreateOrConnectWithoutCustomerInput | PreorderCreateOrConnectWithoutCustomerInput[]
+    createMany?: PreorderCreateManyCustomerInputEnvelope
+    connect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+  }
+
   export type NullableStringFieldUpdateOperationsInput = {
     set?: string | null
+  }
+
+  export type PreorderUpdateManyWithoutCustomerNestedInput = {
+    create?: XOR<PreorderCreateWithoutCustomerInput, PreorderUncheckedCreateWithoutCustomerInput> | PreorderCreateWithoutCustomerInput[] | PreorderUncheckedCreateWithoutCustomerInput[]
+    connectOrCreate?: PreorderCreateOrConnectWithoutCustomerInput | PreorderCreateOrConnectWithoutCustomerInput[]
+    upsert?: PreorderUpsertWithWhereUniqueWithoutCustomerInput | PreorderUpsertWithWhereUniqueWithoutCustomerInput[]
+    createMany?: PreorderCreateManyCustomerInputEnvelope
+    set?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    disconnect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    delete?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    connect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    update?: PreorderUpdateWithWhereUniqueWithoutCustomerInput | PreorderUpdateWithWhereUniqueWithoutCustomerInput[]
+    updateMany?: PreorderUpdateManyWithWhereWithoutCustomerInput | PreorderUpdateManyWithWhereWithoutCustomerInput[]
+    deleteMany?: PreorderScalarWhereInput | PreorderScalarWhereInput[]
+  }
+
+  export type PreorderUncheckedUpdateManyWithoutCustomerNestedInput = {
+    create?: XOR<PreorderCreateWithoutCustomerInput, PreorderUncheckedCreateWithoutCustomerInput> | PreorderCreateWithoutCustomerInput[] | PreorderUncheckedCreateWithoutCustomerInput[]
+    connectOrCreate?: PreorderCreateOrConnectWithoutCustomerInput | PreorderCreateOrConnectWithoutCustomerInput[]
+    upsert?: PreorderUpsertWithWhereUniqueWithoutCustomerInput | PreorderUpsertWithWhereUniqueWithoutCustomerInput[]
+    createMany?: PreorderCreateManyCustomerInputEnvelope
+    set?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    disconnect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    delete?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    connect?: PreorderWhereUniqueInput | PreorderWhereUniqueInput[]
+    update?: PreorderUpdateWithWhereUniqueWithoutCustomerInput | PreorderUpdateWithWhereUniqueWithoutCustomerInput[]
+    updateMany?: PreorderUpdateManyWithWhereWithoutCustomerInput | PreorderUpdateManyWithWhereWithoutCustomerInput[]
+    deleteMany?: PreorderScalarWhereInput | PreorderScalarWhereInput[]
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
@@ -4834,20 +5278,6 @@ export namespace Prisma {
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
-  }
-
-  export type NestedStringFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel>
-    in?: string[]
-    notIn?: string[]
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringFilter<$PrismaModel> | string
   }
 
   export type NestedBoolFilter<$PrismaModel = never> = {
@@ -4896,6 +5326,28 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
+  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type NestedStringFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel>
+    in?: string[]
+    notIn?: string[]
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringFilter<$PrismaModel> | string
+  }
+
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[]
@@ -4911,14 +5363,6 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedStringFilter<$PrismaModel>
     _max?: NestedStringFilter<$PrismaModel>
-  }
-
-  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedBoolFilter<$PrismaModel>
-    _max?: NestedBoolFilter<$PrismaModel>
   }
 
   export type NestedStringNullableFilter<$PrismaModel = never> = {
@@ -4961,6 +5405,248 @@ export namespace Prisma {
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
+  export type PackageCreateWithoutPreordersInput = {
+    kode: string
+    nama: string
+    deskripsi: string
+  }
+
+  export type PackageUncheckedCreateWithoutPreordersInput = {
+    id?: number
+    kode: string
+    nama: string
+    deskripsi: string
+  }
+
+  export type PackageCreateOrConnectWithoutPreordersInput = {
+    where: PackageWhereUniqueInput
+    create: XOR<PackageCreateWithoutPreordersInput, PackageUncheckedCreateWithoutPreordersInput>
+  }
+
+  export type CustomerCreateWithoutPreordersInput = {
+    name: string
+    phone: string
+    email?: string | null
+    createdAt?: Date | string
+  }
+
+  export type CustomerUncheckedCreateWithoutPreordersInput = {
+    id?: number
+    name: string
+    phone: string
+    email?: string | null
+    createdAt?: Date | string
+  }
+
+  export type CustomerCreateOrConnectWithoutPreordersInput = {
+    where: CustomerWhereUniqueInput
+    create: XOR<CustomerCreateWithoutPreordersInput, CustomerUncheckedCreateWithoutPreordersInput>
+  }
+
+  export type PackageUpsertWithoutPreordersInput = {
+    update: XOR<PackageUpdateWithoutPreordersInput, PackageUncheckedUpdateWithoutPreordersInput>
+    create: XOR<PackageCreateWithoutPreordersInput, PackageUncheckedCreateWithoutPreordersInput>
+    where?: PackageWhereInput
+  }
+
+  export type PackageUpdateToOneWithWhereWithoutPreordersInput = {
+    where?: PackageWhereInput
+    data: XOR<PackageUpdateWithoutPreordersInput, PackageUncheckedUpdateWithoutPreordersInput>
+  }
+
+  export type PackageUpdateWithoutPreordersInput = {
+    kode?: StringFieldUpdateOperationsInput | string
+    nama?: StringFieldUpdateOperationsInput | string
+    deskripsi?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type PackageUncheckedUpdateWithoutPreordersInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    kode?: StringFieldUpdateOperationsInput | string
+    nama?: StringFieldUpdateOperationsInput | string
+    deskripsi?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type CustomerUpsertWithoutPreordersInput = {
+    update: XOR<CustomerUpdateWithoutPreordersInput, CustomerUncheckedUpdateWithoutPreordersInput>
+    create: XOR<CustomerCreateWithoutPreordersInput, CustomerUncheckedCreateWithoutPreordersInput>
+    where?: CustomerWhereInput
+  }
+
+  export type CustomerUpdateToOneWithWhereWithoutPreordersInput = {
+    where?: CustomerWhereInput
+    data: XOR<CustomerUpdateWithoutPreordersInput, CustomerUncheckedUpdateWithoutPreordersInput>
+  }
+
+  export type CustomerUpdateWithoutPreordersInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CustomerUncheckedUpdateWithoutPreordersInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    phone?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PreorderCreateWithoutPackageInput = {
+    order_date: Date | string
+    qty: number
+    is_paid: boolean
+    customer: CustomerCreateNestedOneWithoutPreordersInput
+  }
+
+  export type PreorderUncheckedCreateWithoutPackageInput = {
+    id?: number
+    order_date: Date | string
+    order_by: number
+    qty: number
+    is_paid: boolean
+  }
+
+  export type PreorderCreateOrConnectWithoutPackageInput = {
+    where: PreorderWhereUniqueInput
+    create: XOR<PreorderCreateWithoutPackageInput, PreorderUncheckedCreateWithoutPackageInput>
+  }
+
+  export type PreorderCreateManyPackageInputEnvelope = {
+    data: PreorderCreateManyPackageInput | PreorderCreateManyPackageInput[]
+  }
+
+  export type PreorderUpsertWithWhereUniqueWithoutPackageInput = {
+    where: PreorderWhereUniqueInput
+    update: XOR<PreorderUpdateWithoutPackageInput, PreorderUncheckedUpdateWithoutPackageInput>
+    create: XOR<PreorderCreateWithoutPackageInput, PreorderUncheckedCreateWithoutPackageInput>
+  }
+
+  export type PreorderUpdateWithWhereUniqueWithoutPackageInput = {
+    where: PreorderWhereUniqueInput
+    data: XOR<PreorderUpdateWithoutPackageInput, PreorderUncheckedUpdateWithoutPackageInput>
+  }
+
+  export type PreorderUpdateManyWithWhereWithoutPackageInput = {
+    where: PreorderScalarWhereInput
+    data: XOR<PreorderUpdateManyMutationInput, PreorderUncheckedUpdateManyWithoutPackageInput>
+  }
+
+  export type PreorderScalarWhereInput = {
+    AND?: PreorderScalarWhereInput | PreorderScalarWhereInput[]
+    OR?: PreorderScalarWhereInput[]
+    NOT?: PreorderScalarWhereInput | PreorderScalarWhereInput[]
+    id?: IntFilter<"Preorder"> | number
+    order_date?: DateTimeFilter<"Preorder"> | Date | string
+    order_by?: IntFilter<"Preorder"> | number
+    selected_package?: IntFilter<"Preorder"> | number
+    qty?: IntFilter<"Preorder"> | number
+    is_paid?: BoolFilter<"Preorder"> | boolean
+  }
+
+  export type PreorderCreateWithoutCustomerInput = {
+    order_date: Date | string
+    qty: number
+    is_paid: boolean
+    package: PackageCreateNestedOneWithoutPreordersInput
+  }
+
+  export type PreorderUncheckedCreateWithoutCustomerInput = {
+    id?: number
+    order_date: Date | string
+    selected_package: number
+    qty: number
+    is_paid: boolean
+  }
+
+  export type PreorderCreateOrConnectWithoutCustomerInput = {
+    where: PreorderWhereUniqueInput
+    create: XOR<PreorderCreateWithoutCustomerInput, PreorderUncheckedCreateWithoutCustomerInput>
+  }
+
+  export type PreorderCreateManyCustomerInputEnvelope = {
+    data: PreorderCreateManyCustomerInput | PreorderCreateManyCustomerInput[]
+  }
+
+  export type PreorderUpsertWithWhereUniqueWithoutCustomerInput = {
+    where: PreorderWhereUniqueInput
+    update: XOR<PreorderUpdateWithoutCustomerInput, PreorderUncheckedUpdateWithoutCustomerInput>
+    create: XOR<PreorderCreateWithoutCustomerInput, PreorderUncheckedCreateWithoutCustomerInput>
+  }
+
+  export type PreorderUpdateWithWhereUniqueWithoutCustomerInput = {
+    where: PreorderWhereUniqueInput
+    data: XOR<PreorderUpdateWithoutCustomerInput, PreorderUncheckedUpdateWithoutCustomerInput>
+  }
+
+  export type PreorderUpdateManyWithWhereWithoutCustomerInput = {
+    where: PreorderScalarWhereInput
+    data: XOR<PreorderUpdateManyMutationInput, PreorderUncheckedUpdateManyWithoutCustomerInput>
+  }
+
+  export type PreorderCreateManyPackageInput = {
+    id?: number
+    order_date: Date | string
+    order_by: number
+    qty: number
+    is_paid: boolean
+  }
+
+  export type PreorderUpdateWithoutPackageInput = {
+    order_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    qty?: IntFieldUpdateOperationsInput | number
+    is_paid?: BoolFieldUpdateOperationsInput | boolean
+    customer?: CustomerUpdateOneRequiredWithoutPreordersNestedInput
+  }
+
+  export type PreorderUncheckedUpdateWithoutPackageInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    order_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    order_by?: IntFieldUpdateOperationsInput | number
+    qty?: IntFieldUpdateOperationsInput | number
+    is_paid?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type PreorderUncheckedUpdateManyWithoutPackageInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    order_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    order_by?: IntFieldUpdateOperationsInput | number
+    qty?: IntFieldUpdateOperationsInput | number
+    is_paid?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type PreorderCreateManyCustomerInput = {
+    id?: number
+    order_date: Date | string
+    selected_package: number
+    qty: number
+    is_paid: boolean
+  }
+
+  export type PreorderUpdateWithoutCustomerInput = {
+    order_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    qty?: IntFieldUpdateOperationsInput | number
+    is_paid?: BoolFieldUpdateOperationsInput | boolean
+    package?: PackageUpdateOneRequiredWithoutPreordersNestedInput
+  }
+
+  export type PreorderUncheckedUpdateWithoutCustomerInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    order_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    selected_package?: IntFieldUpdateOperationsInput | number
+    qty?: IntFieldUpdateOperationsInput | number
+    is_paid?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type PreorderUncheckedUpdateManyWithoutCustomerInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    order_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    selected_package?: IntFieldUpdateOperationsInput | number
+    qty?: IntFieldUpdateOperationsInput | number
+    is_paid?: BoolFieldUpdateOperationsInput | boolean
   }
 
 

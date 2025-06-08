@@ -1,13 +1,7 @@
 import prisma from '@/lib/prisma';
 
-function getIdFromRequestURL(request) {
-  const url = new URL(request.url);
-  const parts = url.pathname.split('/');
-  return parseInt(parts[parts.length - 1]);
-}
-
-export async function PUT(request) {
-  const id = getIdFromRequestURL(request);
+export async function PUT(request, { params }) {
+  const id = parseInt(params.id);
 
   try {
     const { order_date, order_by, selected_package, qty, status } = await request.json();
@@ -46,8 +40,8 @@ export async function PUT(request) {
   }
 }
 
-export async function DELETE(request) {
-  const id = getIdFromRequestURL(request);
+export async function DELETE(request, { params }) {
+  const id = parseInt(params.id);
 
   try {
     await prisma.preorder.delete({

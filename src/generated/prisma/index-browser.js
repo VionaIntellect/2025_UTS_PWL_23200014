@@ -150,9 +150,9 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  preorder: 'preorder',
+  Preorder: 'Preorder',
   Package: 'Package',
-  customer: 'customer'
+  Customer: 'Customer'
 };
 
 /**
