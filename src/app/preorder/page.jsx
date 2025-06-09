@@ -228,7 +228,9 @@ export default function PreorderPage() {
               </label>
             </div>
 
-            <button type="submit">{editIndex !== null ? "Perbarui" : "Simpan"}</button>
+            <button type="submit" className={styles.saveButton}>
+              {editIndex !== null ? "Perbarui" : "Simpan"}
+            </button>
           </form>
         </div>
       )}
@@ -263,8 +265,18 @@ export default function PreorderPage() {
                   <td>{item.qty}</td>
                   <td>{item.status}</td>
                   <td>
-                    <button onClick={() => handleEdit(i)}>Edit</button>{" "}
-                    <button onClick={() => handleDelete(i)}>Hapus</button>
+                    <button
+                      className={`${styles.actionButton}`}
+                      onClick={() => handleEdit(i)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className={`${styles.actionButton} ${styles.deleteButton}`}
+                      onClick={() => handleDelete(i)}
+                    >
+                      Hapus
+                    </button>
                   </td>
                 </tr>
               ))

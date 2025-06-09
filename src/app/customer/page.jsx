@@ -180,8 +180,18 @@ export default function CustomerPage() {
                 <td>{item.email || '-'}</td>
                 <td>{new Date(item.createdAt).toLocaleString()}</td>
                 <td>
-                  <button onClick={() => handleEdit(index)}>Edit</button>{' '}
-                  <button onClick={() => handleDelete(index)}>Hapus</button>
+                  <button
+                    className={`${styles.actionButton} ${styles.editButton}`}
+                    onClick={() => handleEdit(index)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className={`${styles.actionButton} ${styles.deleteButton}`}
+                    onClick={() => handleDelete(index)}
+                  >
+                    Hapus
+                  </button>
                 </td>
               </tr>
             ))}

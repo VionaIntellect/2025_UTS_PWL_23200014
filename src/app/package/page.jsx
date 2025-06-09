@@ -153,8 +153,18 @@ export default function PackagePage() {
                 <td>{item.nama}</td>
                 <td>{item.deskripsi}</td>
                 <td>
-                  <button onClick={() => handleEdit(index)}>Edit</button>{' '}
-                  <button onClick={() => handleDelete(index)}>Hapus</button>
+                   <button
+                    className={`${styles.actionButton} ${styles.editButton}`}
+                    onClick={() => handleEdit(index)}
+                  >
+                   Edit
+                  </button>
+                  <button
+                    className={`${styles.actionButton} ${styles.deleteButton}`}
+                    onClick={() => handleDelete(index)}
+                  >
+                    Hapus
+                  </button>
                 </td>
               </tr>
             ))}
